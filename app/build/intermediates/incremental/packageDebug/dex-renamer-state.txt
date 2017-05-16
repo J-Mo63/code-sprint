@@ -1,0 +1,7 @@
+#Tue May 16 13:52:26 AEST 2017
+base.0=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ec631d89d9e3d1de151b09388b03922048c25cca
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_54f0c7b2b3d88ccd2e191033a0760032be3de1cd/classes.dex
+base.1=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_54f0c7b2b3d88ccd2e191033a0760032be3de1cd
+file.0=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ec631d89d9e3d1de151b09388b03922048c25cca/classes.dex
