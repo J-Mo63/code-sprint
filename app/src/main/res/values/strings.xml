@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CodeSprint</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_incorrect_details">Username or password incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="app_description">CodeSprint is a platform that allows users to exercise their mind with simple coding-based challenges made to be done fast.</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="signed_in_notification">Signed in successfully</string>
+</resources>
