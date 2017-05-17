@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.view.View;
 import android.widget.Toast;
-
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.activity.HomeActivity;
 import com.sudo_code.codesprint.activity.LoginActivity;
@@ -64,6 +63,6 @@ public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
     }
 
     private boolean isValid(String username, String password) {
-        return (username.equals("jdmoallem@gmail.com") && password.equals("rmsgnu"));
+        return (username.equals("j-mo") && password.equals("rmsgnu"));
     }
 }

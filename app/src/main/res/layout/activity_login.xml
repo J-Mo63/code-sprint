@@ -19,7 +19,7 @@
         android:id="@+id/login_logo_image_view"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        app:srcCompat="@mipmap/cs_logo"
+        app:srcCompat="@drawable/cs_logo"
         android:layout_marginBottom="30dp"
         android:layout_marginTop="10dp" />
 

@@ -48,6 +48,10 @@
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
     {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/cs_logo.png",
+        "source": "/Users/J-Mo/Projects/CodeSprint/app/src/main/res/drawable/cs_logo.png"
+    },
+    {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
         "source": "/Users/J-Mo/.android/build-cache/b4d5a83573f06938e1ee4670c4430b36e2418fd1/output/res/drawable/design_fab_background.xml"
     },
