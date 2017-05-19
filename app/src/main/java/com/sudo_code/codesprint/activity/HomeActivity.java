@@ -18,10 +18,16 @@ import com.sudo_code.codesprint.model.Challenge;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * A home screen that displays past challenges and allows the user to begin
+ * today's challenge.
+ */
 public class HomeActivity extends AppCompatActivity {
 
+    // Object fields
     private ArrayList<Challenge> mChallenges;
 
+    // UI fields
     private RecyclerView mRecycler;
 
     @Override
