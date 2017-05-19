@@ -10,9 +10,15 @@
     tools:layout_editor_absoluteY="8dp">
 
 
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/home_challenge_button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_height="65dp"
+        android:textSize="20sp"
+        android:text="@string/current_challenge_button_label" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/home_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

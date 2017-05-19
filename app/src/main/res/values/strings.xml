@@ -14,4 +14,7 @@
     <string name="users_you_follow_option">Users you follow</string>
     <string name="logout_option">Logout</string>
     <string name="add_user_option">Add user</string>
+    <string name="time_label">Time:</string>
+    <string name="grade_label">Grade:</string>
+    <string name="current_challenge_button_label">Do today\'s challenge</string>
 </resources>

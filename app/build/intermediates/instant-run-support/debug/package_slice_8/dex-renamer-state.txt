@@ -1,4 +1,4 @@
-#Thu May 18 00:16:19 AEST 2017
+#Fri May 19 12:50:28 AEST 2017
 base.0=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8
 renamed.0=classes.dex
 file.0=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex
