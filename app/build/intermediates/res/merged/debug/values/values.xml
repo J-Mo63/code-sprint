@@ -681,7 +681,7 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_sign_in">Sign in</string>
     <string name="add_user_option">Add user</string>
-    <string name="app_description">CodeSprint is a platform that allows users to exercise their mind with simple coding-based challenges made to be done fast.</string>
+    <string name="app_description">CodeSprint is a platform that allows users to exercise their mind with simple coding-based userChallenges made to be done fast.</string>
     <string name="app_name">CodeSprint</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
@@ -697,6 +697,7 @@
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="prompt_password">Password</string>
     <string name="prompt_username">Username</string>
+    <string name="right_arrow">Right arrow</string>
     <string name="search_menu_title">Search</string>
     <string name="signed_in_notification">Signed in successfully</string>
     <string name="status_bar_notification_info_overflow">999+</string>

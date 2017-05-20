@@ -3427,12 +3427,13 @@ containing a value of this type.
         public static final int path_password_strike_through=0x7f070030;
         public static final int prompt_password=0x7f070031;
         public static final int prompt_username=0x7f070032;
+        public static final int right_arrow=0x7f070033;
         public static final int search_menu_title=0x7f070013;
-        public static final int signed_in_notification=0x7f070033;
+        public static final int signed_in_notification=0x7f070034;
         public static final int status_bar_notification_info_overflow=0x7f070014;
-        public static final int time_label=0x7f070034;
-        public static final int title_activity_home=0x7f070035;
-        public static final int users_you_follow_option=0x7f070036;
+        public static final int time_label=0x7f070035;
+        public static final int title_activity_home=0x7f070036;
+        public static final int users_you_follow_option=0x7f070037;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0900a2;

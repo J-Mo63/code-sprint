@@ -6,7 +6,7 @@
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in</string>
     <string name="error_incorrect_details">Username or password incorrect</string>
-    <string name="app_description">CodeSprint is a platform that allows users to exercise their mind with simple coding-based challenges made to be done fast.</string>
+    <string name="app_description">CodeSprint is a platform that allows users to exercise their mind with simple coding-based userChallenges made to be done fast.</string>
     <string name="signed_in_notification">Signed in successfully</string>
 
     <!-- HOME -->
@@ -17,4 +17,5 @@
     <string name="time_label">Time:</string>
     <string name="grade_label">Grade:</string>
     <string name="current_challenge_button_label">Do today\'s challenge</string>
+    <string name="right_arrow">Right arrow</string>
 </resources>

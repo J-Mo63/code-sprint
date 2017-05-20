@@ -13,7 +13,7 @@ import android.view.MenuInflater;
 
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.adapter.ChallengeAdapter;
-import com.sudo_code.codesprint.model.Challenge;
+import com.sudo_code.codesprint.model.UserChallenge;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -25,11 +25,13 @@ import java.util.Date;
 public class HomeActivity extends AppCompatActivity {
 
     // Object fields
-    private ArrayList<Challenge> mChallenges;
+    private ArrayList<UserChallenge> mUserChallenges;
 
-    // UI fields
-    private RecyclerView mRecycler;
-
+    /**
+     * Defines the recycler, gets objects and populates it.
+     *
+     * @param savedInstanceState - the saved bundle state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,15 +39,22 @@ public class HomeActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.app_name);
         setSupportActionBar(toolbar);
-        mRecycler = (RecyclerView) findViewById(R.id.home_recycler_view);
+        RecyclerView mRecycler = (RecyclerView) findViewById(R.id.home_recycler_view);
 
         getChallenges();
 
-        ChallengeAdapter adapter = new ChallengeAdapter(mChallenges);
+        ChallengeAdapter adapter = new ChallengeAdapter(mUserChallenges);
         mRecycler.setAdapter(adapter);
         mRecycler.setLayoutManager(new LinearLayoutManager(this));
     }
 
+
+    /**
+     * Inflates the options menu and sets menu item colours.
+     *
+     * @param menu - The options menu to be inflated.
+     * @return boolean - success
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -59,12 +68,15 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * Populates the challenges field with UserChallenge objects.
+     */
     private void getChallenges() {
-        mChallenges = new ArrayList<>();
-        mChallenges.add(new Challenge(new Date(), "A", 31.45));
-        mChallenges.add(new Challenge(new Date(), "C", 44.15));
-        mChallenges.add(new Challenge(new Date(), "B", 25.23));
-        mChallenges.add(new Challenge(new Date(), "D", 89.01));
+        mUserChallenges = new ArrayList<>();
+        mUserChallenges.add(new UserChallenge(new Date(), "A", 31.45));
+        mUserChallenges.add(new UserChallenge(new Date(), "C", 44.15));
+        mUserChallenges.add(new UserChallenge(new Date(), "B", 25.23));
+        mUserChallenges.add(new UserChallenge(new Date(), "D", 89.01));
     }
 
 }

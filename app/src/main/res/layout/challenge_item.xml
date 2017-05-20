@@ -18,8 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textSize="25sp"
-            android:text="Monday"/>
+            android:textSize="25sp"/>
     </LinearLayout>
 
     <TableLayout
@@ -37,8 +36,9 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                android:gravity="right"
+                android:gravity="end"
                 android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:text="@string/time_label"/>
 
             <TextView
@@ -59,8 +59,9 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                android:gravity="right"
+                android:gravity="end"
                 android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:text="@string/grade_label"/>
 
             <TextView
@@ -75,6 +76,7 @@
 
     <ImageView
         android:id="@+id/challenge_item_right_image_view"
+        android:contentDescription="@string/right_arrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@mipmap/ic_chevron_right_black_24dp"

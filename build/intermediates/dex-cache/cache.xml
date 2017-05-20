@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="ec306186c187eb5fc9538ccc77e7da57cf55fc0e">
+        sha1="0ee11b4e1ba80dae18f8d654b2b6536b34fcfd67">
         <dex dex="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ec631d89d9e3d1de151b09388b03922048c25cca/classes.dex" />
     </item>
     <item
@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
         <dex dex="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_54f0c7b2b3d88ccd2e191033a0760032be3de1cd/classes.dex" />
     </item>
 

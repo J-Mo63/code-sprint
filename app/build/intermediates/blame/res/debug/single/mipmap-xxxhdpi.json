@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
-        "source": "/Users/J-Mo/Projects/CodeSprint/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_person_add_black_24dp.png",
         "source": "/Users/J-Mo/Projects/CodeSprint/app/src/main/res/mipmap-xxxhdpi/ic_person_add_black_24dp.png"
+    },
+    {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
+        "source": "/Users/J-Mo/Projects/CodeSprint/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_chevron_right_black_24dp.png",

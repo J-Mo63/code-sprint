@@ -1036,12 +1036,13 @@ int string path_password_eye_mask_visible 0x7f07002f
 int string path_password_strike_through 0x7f070030
 int string prompt_password 0x7f070031
 int string prompt_username 0x7f070032
+int string right_arrow 0x7f070033
 int string search_menu_title 0x7f070013
-int string signed_in_notification 0x7f070033
+int string signed_in_notification 0x7f070034
 int string status_bar_notification_info_overflow 0x7f070014
-int string time_label 0x7f070034
-int string title_activity_home 0x7f070035
-int string users_you_follow_option 0x7f070036
+int string time_label 0x7f070035
+int string title_activity_home 0x7f070036
+int string users_you_follow_option 0x7f070037
 int style AlertDialog_AppCompat 0x7f0900a2
 int style AlertDialog_AppCompat_Light 0x7f0900a3
 int style Animation_AppCompat_Dialog 0x7f0900a4

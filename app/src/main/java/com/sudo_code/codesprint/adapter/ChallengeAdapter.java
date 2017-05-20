@@ -8,25 +8,28 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import com.sudo_code.codesprint.R;
-import com.sudo_code.codesprint.model.Challenge;
+import com.sudo_code.codesprint.model.UserChallenge;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.ViewHolder> {
-    private List<Challenge> challenges;
+
+    // Object fields
+    private List<UserChallenge> userChallenges;
+
 
     /**
      * a constructor for the class
      *
-     * @param challenges
+     * @param userChallenges
      */
-    public ChallengeAdapter(ArrayList<Challenge> challenges) {
-        this.challenges = challenges;
+    public ChallengeAdapter(ArrayList<UserChallenge> userChallenges) {
+        this.userChallenges = userChallenges;
     }
+
 
     /**
      * things to do on the creation of the viewholder
@@ -45,6 +48,7 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
         return new ViewHolder(contactView);
     }
 
+
     /**
      * things to do when binding the viewholder
      *
@@ -53,11 +57,12 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
      */
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        final Challenge challenge = challenges.get(position);
+        final UserChallenge userChallenge = userChallenges.get(position);
 
-        holder.gradeTextView.setText(challenge.getGrade());
-        holder.timeTextView.setText(Double.toString(challenge.getTime()));
+        holder.gradeTextView.setText(userChallenge.getGrade());
+        holder.timeTextView.setText(Double.toString(userChallenge.getTime()));
     }
+
 
     /**
      * returns the current size of the adapter items
@@ -66,13 +71,14 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
      */
     @Override
     public int getItemCount() {
-        return challenges.size();
+        return userChallenges.size();
     }
+
 
     /**
      * a class that is the viewholder for the adapter
      */
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         private TextView gradeTextView;
         private TextView timeTextView;
 
