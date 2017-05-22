@@ -14,7 +14,11 @@ import com.sudo_code.codesprint.model.UserChallenge;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
+/**
+ * An adapter class for the recycler to hold UserChallenge items.
+ */
 public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.ViewHolder> {
 
     // Object fields
@@ -22,9 +26,9 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
 
 
     /**
-     * a constructor for the class
+     * A constructor for the adapter class.
      *
-     * @param userChallenges
+     * @param userChallenges - A list of items for the recycler
      */
     public ChallengeAdapter(ArrayList<UserChallenge> userChallenges) {
         this.userChallenges = userChallenges;
@@ -32,42 +36,43 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
 
 
     /**
-     * things to do on the creation of the viewholder
+     * Things to do on the creation of the viewholder.
      *
-     * @param parent
-     * @param viewType
-     * @return
+     * @param parent - Parent view
+     * @param viewType - Type of view
+     * @return ViewHolder - Inflated recycler item
      */
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
 
-        View contactView = inflater.inflate(R.layout.challenge_item, parent, false);
+        View challengeItem = inflater.inflate(R.layout.challenge_item, parent, false);
 
-        return new ViewHolder(contactView);
+        return new ViewHolder(challengeItem);
     }
 
 
     /**
-     * things to do when binding the viewholder
+     * Things to do when binding the viewholder.
      *
-     * @param holder
-     * @param position
+     * @param holder - Reference to holder
+     * @param position - Item postion
      */
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
         final UserChallenge userChallenge = userChallenges.get(position);
 
+        holder.dayTextView.setText("Monday");
         holder.gradeTextView.setText(userChallenge.getGrade());
-        holder.timeTextView.setText(Double.toString(userChallenge.getTime()));
+        holder.timeTextView.setText(String.format(Locale.UK, "%1$,.2f", userChallenge.getTime()));
     }
 
 
     /**
-     * returns the current size of the adapter items
+     * Returns the current size of the adapter items.
      *
-     * @return
+     * @return int - Number of items
      */
     @Override
     public int getItemCount() {
@@ -76,16 +81,19 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
 
 
     /**
-     * a class that is the viewholder for the adapter
+     * A class for viewholder... for the adapter.
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
+
+        // UI fields
+        private TextView dayTextView;
         private TextView gradeTextView;
         private TextView timeTextView;
 
         /**
          * a constructor that has an onclick listener
          *
-         * @param itemView
+         * @param itemView - The current ViewHolder
          */
         private ViewHolder(final View itemView) {
             super(itemView);
@@ -93,6 +101,7 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
             if (rightIcon != null) {
                 rightIcon.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
             }
+            dayTextView = (TextView) itemView.findViewById(R.id.challenge_item_day);
             gradeTextView = (TextView) itemView.findViewById(R.id.challenge_item_grade);
             timeTextView = (TextView) itemView.findViewById(R.id.challenge_item_time);
         }
