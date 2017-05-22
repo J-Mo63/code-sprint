@@ -36,6 +36,9 @@
         <activity
             android:name="com.sudo_code.codesprint.activity.HomeActivity"
             android:label="@string/title_activity_home" />
+        <activity
+            android:name="com.sudo_code.codesprint.activity.BeginChallengeActivity"
+            android:label="@string/title_activity_begin_challenge" />
     </application>
 
 </manifest>

@@ -1,4 +1,5 @@
 <resources>
+    <!-- GLOBAL -->
     <string name="app_name">CodeSprint</string>
 
     <!-- LOGIN -->
@@ -18,4 +19,8 @@
     <string name="grade_label">Grade:</string>
     <string name="current_challenge_button_label">Do today\'s challenge</string>
     <string name="right_arrow">Right arrow</string>
+
+    <!-- BEGIN CHALLENGE -->
+    <string name="title_activity_begin_challenge">BeginChallengeActivity</string>
+    <string name="todays_challenge">Today\'s Challenge</string>
 </resources>

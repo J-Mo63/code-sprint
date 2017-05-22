@@ -25,7 +25,10 @@
         </activity>
         <activity
             android:name=".activity.HomeActivity"
-            android:label="@string/title_activity_home"></activity>
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name=".activity.BeginChallengeActivity"
+            android:label="@string/title_activity_begin_challenge"></activity>
     </application>
 
 </manifest>

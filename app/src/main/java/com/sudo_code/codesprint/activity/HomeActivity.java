@@ -1,5 +1,6 @@
 package com.sudo_code.codesprint.activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -10,6 +11,8 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
+import android.widget.Button;
 
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.adapter.ChallengeAdapter;
@@ -41,11 +44,23 @@ public class HomeActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         RecyclerView mRecycler = (RecyclerView) findViewById(R.id.home_recycler_view);
 
+        // Adapter setup
         getChallenges();
-
         ChallengeAdapter adapter = new ChallengeAdapter(mUserChallenges);
         mRecycler.setAdapter(adapter);
         mRecycler.setLayoutManager(new LinearLayoutManager(this));
+
+        // Intent definitions
+        final Intent intent = new Intent(this, BeginChallengeActivity.class);
+
+        // Listeners
+        Button currentChallengeButton = (Button) findViewById(R.id.home_challenge_button);
+        currentChallengeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent);
+            }
+        });
     }
 
 
