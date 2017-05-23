@@ -1,6 +1,7 @@
 package com.sudo_code.codesprint.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.support.v7.widget.RecyclerView;
@@ -8,8 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.sudo_code.codesprint.R;
+import com.sudo_code.codesprint.activity.UserChallengeActivity;
 import com.sudo_code.codesprint.model.UserChallenge;
 
 import java.util.ArrayList;
@@ -66,6 +69,14 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
         holder.dayTextView.setText("Monday");
         holder.gradeTextView.setText(userChallenge.getGrade());
         holder.timeTextView.setText(String.format(Locale.UK, "%1$,.2f", userChallenge.getTime()));
+
+        holder.itemLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent beginChallengeIntent = new Intent(view.getContext(), UserChallengeActivity.class);
+                view.getContext().getApplicationContext().startActivity(beginChallengeIntent);
+            }
+        });
     }
 
 
@@ -89,6 +100,7 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
         private TextView dayTextView;
         private TextView gradeTextView;
         private TextView timeTextView;
+        private LinearLayout itemLayout;
 
         /**
          * a constructor that has an onclick listener
@@ -104,6 +116,7 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
             dayTextView = (TextView) itemView.findViewById(R.id.challenge_item_day);
             gradeTextView = (TextView) itemView.findViewById(R.id.challenge_item_grade);
             timeTextView = (TextView) itemView.findViewById(R.id.challenge_item_time);
+            itemLayout = (LinearLayout) itemView.findViewById(R.id.challenge_item_layout);
         }
     }
 }

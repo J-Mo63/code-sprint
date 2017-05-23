@@ -236,7 +236,15 @@
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/layout/abc_action_menu_item_layout.xml"
     },
     {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/activity_user_challenge.xml",
+        "source": "/Users/J-Mo/Projects/CodeSprint/app/src/main/res/layout/activity_user_challenge.xml"
+    },
+    {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/appbar_user_challenge_layout.xml",
+        "source": "/Users/J-Mo/Projects/CodeSprint/app/src/main/res/layout/appbar_user_challenge_layout.xml"
     }
 ]

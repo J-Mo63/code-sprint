@@ -51,14 +51,14 @@ public class HomeActivity extends AppCompatActivity {
         mRecycler.setLayoutManager(new LinearLayoutManager(this));
 
         // Intent definitions
-        final Intent intent = new Intent(this, BeginChallengeActivity.class);
+        final Intent beginChallengeIntent = new Intent(this, BeginChallengeActivity.class);
 
         // Listeners
         Button currentChallengeButton = (Button) findViewById(R.id.home_challenge_button);
         currentChallengeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(intent);
+                startActivity(beginChallengeIntent);
             }
         });
     }

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml:2:1-34:12
+ADDED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml:2:1-37:12
 	package
 		ADDED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml:3:5-39
 		INJECTED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml
@@ -26,7 +26,7 @@ ADDED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml:8:5-
 	android:name
 		ADDED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml:8:22-69
 application
-ADDED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml:10:5-32:19
+ADDED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml:10:5-35:19
 MERGED from [com.android.support:design:25.3.1] /Users/J-Mo/.android/build-cache/b4d5a83573f06938e1ee4670c4430b36e2418fd1/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/J-Mo/.android/build-cache/bfcf7fe135e4af1e4121ca6b61b765f6bb983f01/output/AndroidManifest.xml:26:5-20
@@ -74,11 +74,17 @@ ADDED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml:26:9
 	android:name
 		ADDED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml:27:13-50
 activity#com.sudo_code.codesprint.activity.BeginChallengeActivity
-ADDED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml:29:9-31:79
+ADDED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml:29:9-31:70
 	android:label
 		ADDED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml:31:13-67
 	android:name
 		ADDED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml:30:13-60
+activity#com.sudo_code.codesprint.activity.UserChallengeActivity
+ADDED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml:32:9-34:83
+	android:label
+		ADDED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml:34:13-71
+	android:name
+		ADDED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml:33:13-59
 uses-sdk
 INJECTED from /Users/J-Mo/Projects/CodeSprint/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:25.3.1] /Users/J-Mo/.android/build-cache/b4d5a83573f06938e1ee4670c4430b36e2418fd1/output/AndroidManifest.xml:21:5-23:62

@@ -39,6 +39,9 @@
         <activity
             android:name="com.sudo_code.codesprint.activity.BeginChallengeActivity"
             android:label="@string/title_activity_begin_challenge" />
+        <activity
+            android:name="com.sudo_code.codesprint.activity.UserChallengeActivity"
+            android:label="@string/title_activity_view_user_challenge" />
 
         <provider
             android:name="com.android.tools.fd.runtime.InstantRunContentProvider"

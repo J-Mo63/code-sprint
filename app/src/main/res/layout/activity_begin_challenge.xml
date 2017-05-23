@@ -26,6 +26,7 @@
     <Button
         android:id="@+id/begin_challenge_begin_button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="65dp"
+        android:textSize="20sp"
         android:text="Let's begin!" />
 </LinearLayout>

@@ -704,6 +704,7 @@
     <string name="time_label">Time:</string>
     <string name="title_activity_begin_challenge">BeginChallengeActivity</string>
     <string name="title_activity_home">Home</string>
+    <string name="title_activity_view_user_challenge">ViewUserChallengeActivity</string>
     <string name="todays_challenge">Today\'s Challenge</string>
     <string name="users_you_follow_option">Users you follow</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

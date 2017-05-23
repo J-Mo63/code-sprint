@@ -23,4 +23,5 @@
     <!-- BEGIN CHALLENGE -->
     <string name="title_activity_begin_challenge">BeginChallengeActivity</string>
     <string name="todays_challenge">Today\'s Challenge</string>
+    <string name="title_activity_view_user_challenge">ViewUserChallengeActivity</string>
 </resources>
