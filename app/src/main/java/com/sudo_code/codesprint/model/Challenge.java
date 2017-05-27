@@ -10,16 +10,22 @@ import android.os.Parcelable;
 public class Challenge implements Parcelable {
 
     // Class fields
+    private int id;
+    private String content;
     private String question;
     private String answer;
 
     /**
      * A constructor for a Challenge
      *
+     * @param id - The challenge ID
+     * @param content - The question content
      * @param question - The question text
      * @param answer - The accepted answer to the question
      */
-    public Challenge(String question, String answer) {
+    public Challenge(int id, String content, String question, String answer) {
+        this.id = id;
+        this.content = content;
         this.question = question;
         this.answer = answer;
     }
@@ -38,6 +44,24 @@ public class Challenge implements Parcelable {
             return new Challenge[size];
         }
     };
+
+    /**
+     * ID getter
+     *
+     * @return int - the challenge database ID
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * Content getter
+     *
+     * @return String - the question content
+     */
+    public String getContent() {
+        return content;
+    }
 
     /**
      * Question getter
@@ -62,6 +86,8 @@ public class Challenge implements Parcelable {
      * @param in - the parcel being read to
      */
     protected Challenge(Parcel in) {
+        id = in.readInt();
+        content = in.readString();
         question = in.readString();
         answer = in.readString();
     }
@@ -82,6 +108,8 @@ public class Challenge implements Parcelable {
      */
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
+        dest.writeString(content);
         dest.writeString(question);
         dest.writeString(answer);
     }

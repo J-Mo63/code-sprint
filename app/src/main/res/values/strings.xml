@@ -20,6 +20,10 @@
     <string name="current_challenge_button_label">Do today\'s challenge</string>
     <string name="right_arrow">Right arrow</string>
 
+    <!-- VIEW USERCHALLENGE -->
+    <string name="your_results_title">Your Results</string>
+    <string name="users_you_re_following_title">Users you\'re following</string>
+
     <!-- BEGIN CHALLENGE -->
     <string name="title_activity_begin_challenge">BeginChallengeActivity</string>
     <string name="todays_challenge">Today\'s Challenge</string>
@@ -36,4 +40,10 @@
     <string name="submit_button_text">Submit</string>
     <string name="answer_incorrect_notification">Answer incorrect, try again</string>
     <string name="answer_correct_notification">Correct!</string>
+
+    <!-- RESULTS -->
+    <string name="title_activity_results">ResultsActivity</string>
+    <string name="results_title">Your Results</string>
+    <string name="total_time_title">Total Time</string>
+    <string name="results_bar_title">Results</string>
 </resources>

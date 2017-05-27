@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class FetchChallengesTask extends AsyncTask<Void, Void, ArrayList<Challenge>> {
 
     // Constants
-    public static final String CHALLENGES = "challenge_challenges";
+    public static final String CHALLENGES = "challenges_tag";
 
     // Object fields
     private Activity mBeginChallenngeActivity;
@@ -58,9 +58,9 @@ public class FetchChallengesTask extends AsyncTask<Void, Void, ArrayList<Challen
         try {
             // Simulate network access.
             Thread.sleep(2500);
-            challenges.add(new Challenge("What is 2+2?", "5"));
-            challenges.add(new Challenge("Where is home?", "The attic"));
-            challenges.add(new Challenge("Where are we reporting live from?", "The 90059"));
+            challenges.add(new Challenge(1, "meme 1", "What is 2+2?", "5"));
+            challenges.add(new Challenge(2, "meme 2", "Where is home?", "The attic"));
+            challenges.add(new Challenge(3, "meme 3", "Where are we reporting live from?", "The 90059"));
         }
         catch (InterruptedException e) {
             return null;

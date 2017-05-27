@@ -88,6 +88,10 @@
         "source": "/Users/J-Mo/.android/build-cache/b4d5a83573f06938e1ee4670c4430b36e2418fd1/output/res/layout/design_navigation_item.xml"
     },
     {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/activity_results.xml",
+        "source": "/Users/J-Mo/Projects/CodeSprint/app/src/main/res/layout/activity_results.xml"
+    },
+    {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/notification_template_custom_big.xml",
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/layout/notification_template_custom_big.xml"
     },
@@ -238,6 +242,10 @@
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/activity_home.xml",
         "source": "/Users/J-Mo/Projects/CodeSprint/app/src/main/res/layout/activity_home.xml"
+    },
+    {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/appbar_results_layout.xml",
+        "source": "/Users/J-Mo/Projects/CodeSprint/app/src/main/res/layout/appbar_results_layout.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
