@@ -46,4 +46,8 @@
     <string name="results_title">Your Results</string>
     <string name="total_time_title">Total Time</string>
     <string name="results_bar_title">Results</string>
+    <string name="done_button_text">Done</string>
+    <string name="question_one_label">Question 1:</string>
+    <string name="question_two_label">Question 2:</string>
+    <string name="question_three_label">Question 3:</string>
 </resources>

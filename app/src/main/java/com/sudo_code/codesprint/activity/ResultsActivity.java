@@ -13,11 +13,20 @@ import java.util.ArrayList;
 import java.util.Locale;
 import static com.sudo_code.codesprint.activity.ChallengeActivity.RESULTS;
 
+/**
+ * A screen to display user results for a particular Challenge.
+ */
 public class ResultsActivity extends AppCompatActivity {
 
     // Object fields
     private ArrayList<Result> mResults;
 
+
+    /**
+     * Sets up onscreen elements and defines click listeners.
+     *
+     * @param savedInstanceState - the saved bundle state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,15 +64,31 @@ public class ResultsActivity extends AppCompatActivity {
 //        new postResultsTask(mResults);
     }
 
+    /**
+     * A helper method to format longs into strings with the appropriate formatting.
+     *
+     * @param time - the long to be formatted
+     * @return String - the formatted string
+     */
     private String formatTime(long time) {
         double d = ((double) time)/1000;
         return String.format(Locale.UK, "%.2f", d) + "s";
     }
 
+    /**
+     * A method that calculates the user's grade for the completed challenges.
+     *
+     * @return String - the grade value
+   t  */
     private String calculateGrade() {
         return "B";
     }
 
+    /**
+     * A method to calculate the total time taken to complete the set of Challenges.
+     *
+     * @return long - total time taken
+     */
     private long getTotal() {
         long total = 0;
         for (Result result : mResults) {

@@ -692,6 +692,7 @@
     <string name="challenge_instructions_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="current_challenge_button_label">Do today\'s challenge</string>
+    <string name="done_button_text">Done</string>
     <string name="downloading_challenges_notification">Downloading today\'s challenges</string>
     <string name="error_incorrect_details">Username or password incorrect</string>
     <string name="finished_downloading_notification">Challenges finished downloading</string>
@@ -704,6 +705,9 @@
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="prompt_password">Password</string>
     <string name="prompt_username">Username</string>
+    <string name="question_one_label">Question 1:</string>
+    <string name="question_three_label">Question 3:</string>
+    <string name="question_two_label">Question 2:</string>
     <string name="results_bar_title">Results</string>
     <string name="results_title">Your Results</string>
     <string name="right_arrow">Right arrow</string>

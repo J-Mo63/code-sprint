@@ -74,13 +74,17 @@ public class ChallengeActivity extends Activity {
      * results to the user.
      */
     private void submitAnswer() {
+        // If the answer is correct
         if (mCurrentChallenge.getAnswer().equals(mAnswerField.getText().toString())) {
             recordTime();
             mAnswerField.setText("");
+
+            // If there are more Challenges
             if (mChallenges.size() > 0) {
                 Toast.makeText(this, R.string.answer_correct_notification, Toast.LENGTH_SHORT).show();
                 getChallenge();
             }
+            // If all Challenges are completed
             else {
                 mTimer.stop();
                 // Create intent to open challenge and include the downloaded challenges
@@ -91,8 +95,8 @@ public class ChallengeActivity extends Activity {
                 startActivity(resultsIntent);
             }
         }
+        // If it is incorrect
         else {
-
             Toast.makeText(this, R.string.answer_incorrect_notification, Toast.LENGTH_SHORT).show();
             mAnswerField.setText("");
         }
