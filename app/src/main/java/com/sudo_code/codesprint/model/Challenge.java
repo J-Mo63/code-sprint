@@ -24,6 +24,9 @@ public class Challenge implements Parcelable {
         this.answer = answer;
     }
 
+    /**
+     * Includes parcel creation methods as a constant
+     */
     public static final Creator<Challenge> CREATOR = new Creator<Challenge>() {
         @Override
         public Challenge createFromParcel(Parcel in) {

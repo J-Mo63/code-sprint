@@ -7,13 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import com.sudo_code.codesprint.R;
-import com.sudo_code.codesprint.activity.BeginChallengeActivity;
+import com.sudo_code.codesprint.activity.ChallengeActivity;
 import com.sudo_code.codesprint.model.Challenge;
 import java.util.ArrayList;
 
 /**
- * Represents an asynchronous login/registration task used to authenticate
- * the user.
+ * Represents an asynchronous task used to retrieve the current challenges from
+ * the server.
  */
 public class FetchChallengesTask extends AsyncTask<Void, Void, ArrayList<Challenge>> {
 
@@ -80,10 +80,12 @@ public class FetchChallengesTask extends AsyncTask<Void, Void, ArrayList<Challen
     protected void onPostExecute(final ArrayList<Challenge> challenges) {
         Button beginButton = (Button) mBeginChallenngeActivity.findViewById(R.id.begin_challenge_begin_button);
 
-        final Intent challengesIntent = new Intent(mBeginChallenngeActivity.getApplicationContext(), ChallengeActivity.class);
-
+        // Create intent to open challenge and include the downloaded challenges
+        final Intent challengesIntent = new Intent(mBeginChallenngeActivity.getApplicationContext(),
+                ChallengeActivity.class);
         challengesIntent.putExtra(CHALLENGES, challenges);
 
+        // Add intent to click listener
         beginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,9 +93,9 @@ public class FetchChallengesTask extends AsyncTask<Void, Void, ArrayList<Challen
             }
         });
 
+        // Tell the user it has been downloaded and that they may proceed
         Toast.makeText(mBeginChallenngeActivity.getApplicationContext(),
                 R.string.finished_downloading_notification, Toast.LENGTH_SHORT).show();
-
         beginButton.setEnabled(true);
     }
 }

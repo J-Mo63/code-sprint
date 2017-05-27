@@ -29,7 +29,11 @@
     <string name="challenge_instructions_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</string>
     <string name="downloading_challenges_notification">Downloading today\'s challenges</string>
     <string name="finished_downloading_notification">Challenges finished downloading</string>
+
+    <!-- CHALLENGE -->
     <string name="title_activity_challenge">ChallengeActivity</string>
     <string name="your_answer_hint">Your answer</string>
     <string name="submit_button_text">Submit</string>
+    <string name="answer_incorrect_notification">Answer incorrect, try again</string>
+    <string name="answer_correct_notification">Correct!</string>
 </resources>

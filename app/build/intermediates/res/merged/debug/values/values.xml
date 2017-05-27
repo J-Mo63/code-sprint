@@ -706,6 +706,7 @@
     <string name="search_menu_title">Search</string>
     <string name="signed_in_notification">Signed in successfully</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="submit_button_text">Submit</string>
     <string name="time_label">Time:</string>
     <string name="title_activity_begin_challenge">BeginChallengeActivity</string>
     <string name="title_activity_challenge">ChallengeActivity</string>
@@ -713,6 +714,7 @@
     <string name="title_activity_view_user_challenge">ViewUserChallengeActivity</string>
     <string name="todays_challenge">Today\'s Challenge</string>
     <string name="users_you_follow_option">Users you follow</string>
+    <string name="your_answer_hint">Your answer</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
