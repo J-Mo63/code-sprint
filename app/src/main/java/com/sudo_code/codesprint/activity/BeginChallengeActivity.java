@@ -1,11 +1,17 @@
 package com.sudo_code.codesprint.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.sudo_code.codesprint.R;
+import com.sudo_code.codesprint.task.FetchChallengesTask;
+import com.sudo_code.codesprint.task.UserLoginTask;
 
 /**
  * A screen that downloads the current challenge and checks if the user is ready to begin.
@@ -13,7 +19,7 @@ import com.sudo_code.codesprint.R;
 public class BeginChallengeActivity extends AppCompatActivity {
 
     /**
-     * Sets up onscreen elements, sets onclicks and gets the current challenge.
+     * Sets up onscreen elements and gets the current challenge.
      *
      * @param savedInstanceState - the saved bundle state
      */
@@ -25,6 +31,9 @@ public class BeginChallengeActivity extends AppCompatActivity {
         toolbar.setTitle(R.string.todays_challenge);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        FetchChallengesTask fetchTask = new FetchChallengesTask(BeginChallengeActivity.this);
+        fetchTask.execute();
     }
 
     /**

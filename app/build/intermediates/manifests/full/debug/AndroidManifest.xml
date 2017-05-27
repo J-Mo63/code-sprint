@@ -42,6 +42,9 @@
         <activity
             android:name="com.sudo_code.codesprint.activity.UserChallengeActivity"
             android:label="@string/title_activity_view_user_challenge" />
+        <activity
+            android:name="com.sudo_code.codesprint.activity.ChallengeActivity"
+            android:label="@string/title_activity_challenge" />
     </application>
 
 </manifest>

@@ -27,4 +27,6 @@
     <string name="are_you_ready_to_begin_title">Are you ready to begin?</string>
     <string name="begin_button_text">Let\'s begin!</string>
     <string name="challenge_instructions_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</string>
+    <string name="downloading_challenges_notification">Downloading today\'s challenges</string>
+    <string name="finished_downloading_notification">Challenges finished downloading</string>
 </resources>

@@ -690,7 +690,9 @@
     <string name="challenge_instructions_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="current_challenge_button_label">Do today\'s challenge</string>
+    <string name="downloading_challenges_notification">Downloading today\'s challenges</string>
     <string name="error_incorrect_details">Username or password incorrect</string>
+    <string name="finished_downloading_notification">Challenges finished downloading</string>
     <string name="grade_label">Grade:</string>
     <string name="logout_option">Logout</string>
     <string name="password_toggle_content_description">Toggle password visibility</string>
@@ -706,6 +708,7 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="time_label">Time:</string>
     <string name="title_activity_begin_challenge">BeginChallengeActivity</string>
+    <string name="title_activity_challenge">ChallengeActivity</string>
     <string name="title_activity_home">Home</string>
     <string name="title_activity_view_user_challenge">ViewUserChallengeActivity</string>
     <string name="todays_challenge">Today\'s Challenge</string>
