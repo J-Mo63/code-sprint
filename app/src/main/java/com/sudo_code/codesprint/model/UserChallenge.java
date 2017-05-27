@@ -9,6 +9,7 @@ import java.util.Date;
 public class UserChallenge {
 
     // Class fields
+    private String username;
     private Date date;
     private String grade;
     private double time;
@@ -20,7 +21,8 @@ public class UserChallenge {
      * @param grade - The grade achieved by the user
      * @param time - The total time taken to complete it
      */
-    public UserChallenge(Date date, String grade, double time) {
+    public UserChallenge(String username, Date date, String grade, double time) {
+        this.username = username;
         this.date = date;
         this.grade = grade;
         this.time = time;
@@ -51,5 +53,9 @@ public class UserChallenge {
      */
     public double getTime() {
         return time;
+    }
+
+    public String getUsername() {
+        return username;
     }
 }

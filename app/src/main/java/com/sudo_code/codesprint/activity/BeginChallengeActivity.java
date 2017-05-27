@@ -7,8 +7,16 @@ import android.view.MenuItem;
 
 import com.sudo_code.codesprint.R;
 
+/**
+ * A screen that downloads the current challenge and checks if the user is ready to begin.
+ */
 public class BeginChallengeActivity extends AppCompatActivity {
 
+    /**
+     * Sets up onscreen elements, sets onclicks and gets the current challenge.
+     *
+     * @param savedInstanceState - the saved bundle state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +27,12 @@ public class BeginChallengeActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    /**
+     * Is called when an option is selected by the user.
+     *
+     * @param item - The options item selected
+     * @return boolean - success
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home ) {

@@ -6,6 +6,7 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -49,6 +50,9 @@ public class HomeActivity extends AppCompatActivity {
         ChallengeAdapter adapter = new ChallengeAdapter(mUserChallenges);
         mRecycler.setAdapter(adapter);
         mRecycler.setLayoutManager(new LinearLayoutManager(this));
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,
+                LinearLayoutManager.VERTICAL);
+        mRecycler.addItemDecoration(dividerItemDecoration);
 
         // Intent definitions
         final Intent beginChallengeIntent = new Intent(this, BeginChallengeActivity.class);
@@ -88,10 +92,10 @@ public class HomeActivity extends AppCompatActivity {
      */
     private void getChallenges() {
         mUserChallenges = new ArrayList<>();
-        mUserChallenges.add(new UserChallenge(new Date(), "A", 31.45));
-        mUserChallenges.add(new UserChallenge(new Date(), "C", 44.15));
-        mUserChallenges.add(new UserChallenge(new Date(), "B", 25.23));
-        mUserChallenges.add(new UserChallenge(new Date(), "D", 89.01));
+        mUserChallenges.add(new UserChallenge("j-mo", new Date(), "A", 31.45));
+        mUserChallenges.add(new UserChallenge("j-mo", new Date(), "C", 44.15));
+        mUserChallenges.add(new UserChallenge("j-mo", new Date(), "B", 25.23));
+        mUserChallenges.add(new UserChallenge("j-mo", new Date(), "D", 89.01));
     }
 
 }

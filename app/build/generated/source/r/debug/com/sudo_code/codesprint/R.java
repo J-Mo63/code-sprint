@@ -3112,7 +3112,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int action0=0x7f0d00a0;
-        public static final int action_add_user=0x7f0d00b8;
+        public static final int action_add_user=0x7f0d00bd;
         public static final int action_bar=0x7f0d006b;
         public static final int action_bar_activity_content=0x7f0d0000;
         public static final int action_bar_container=0x7f0d006a;
@@ -3129,13 +3129,13 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0d0068;
         public static final int action_mode_bar_stub=0x7f0d0067;
         public static final int action_mode_close_button=0x7f0d004a;
-        public static final int action_quit=0x7f0d00b7;
+        public static final int action_quit=0x7f0d00bc;
         public static final int action_text=0x7f0d009f;
-        public static final int action_users=0x7f0d00b6;
+        public static final int action_users=0x7f0d00bb;
         public static final int actions=0x7f0d00ad;
         public static final int activity_chooser_view_content=0x7f0d004b;
-        public static final int activity_user_grade=0x7f0d0087;
-        public static final int activity_user_time=0x7f0d0086;
+        public static final int activity_user_grade=0x7f0d0088;
+        public static final int activity_user_time=0x7f0d0087;
         public static final int add=0x7f0d0026;
         public static final int alertTitle=0x7f0d005f;
         public static final int all=0x7f0d0014;
@@ -3151,13 +3151,11 @@ containing a value of this type.
         public static final int center_horizontal=0x7f0d0030;
         public static final int center_vertical=0x7f0d0031;
         public static final int chains=0x7f0d0016;
-        public static final int challenge_item_day=0x7f0d008b;
-        public static final int challenge_item_day_time_label=0x7f0d008c;
+        public static final int challenge_item_day=0x7f0d008d;
         public static final int challenge_item_grade=0x7f0d008f;
-        public static final int challenge_item_grade_label=0x7f0d008e;
-        public static final int challenge_item_layout=0x7f0d008a;
+        public static final int challenge_item_layout=0x7f0d008c;
         public static final int challenge_item_right_image_view=0x7f0d0090;
-        public static final int challenge_item_time=0x7f0d008d;
+        public static final int challenge_item_time=0x7f0d008e;
         public static final int checkbox=0x7f0d0062;
         public static final int chronometer=0x7f0d00a9;
         public static final int clip_horizontal=0x7f0d003a;
@@ -3211,7 +3209,7 @@ containing a value of this type.
         public static final int login_progress=0x7f0d007e;
         public static final int login_sign_in_button=0x7f0d0085;
         public static final int login_username_edit_text=0x7f0d0082;
-        public static final int masked=0x7f0d00b5;
+        public static final int masked=0x7f0d00ba;
         public static final int media_actions=0x7f0d00a3;
         public static final int middle=0x7f0d0040;
         public static final int mini=0x7f0d003e;
@@ -3275,7 +3273,7 @@ containing a value of this type.
         public static final int text2=0x7f0d00b0;
         public static final int textSpacerNoButtons=0x7f0d0059;
         public static final int textSpacerNoTitle=0x7f0d0058;
-        public static final int textView2=0x7f0d0088;
+        public static final int textView2=0x7f0d0089;
         public static final int text_input_password_toggle=0x7f0d009c;
         public static final int textinput_counter=0x7f0d0009;
         public static final int textinput_error=0x7f0d000a;
@@ -3283,7 +3281,7 @@ containing a value of this type.
         public static final int title=0x7f0d0051;
         public static final int titleDividerNoCustom=0x7f0d0060;
         public static final int title_template=0x7f0d005e;
-        public static final int toolbar=0x7f0d0089;
+        public static final int toolbar=0x7f0d008b;
         public static final int top=0x7f0d0037;
         public static final int topPanel=0x7f0d005d;
         public static final int touch_outside=0x7f0d0093;
@@ -3291,8 +3289,15 @@ containing a value of this type.
         public static final int transition_scene_layoutid_cache=0x7f0d000c;
         public static final int up=0x7f0d000d;
         public static final int useLogo=0x7f0d0020;
+        public static final int user_challenge_item_grade=0x7f0d00b7;
+        public static final int user_challenge_item_layout=0x7f0d00b4;
+        public static final int user_challenge_item_rank=0x7f0d00b8;
+        public static final int user_challenge_item_time=0x7f0d00b6;
+        public static final int user_challenge_item_username=0x7f0d00b5;
+        public static final int user_challenge_recycler=0x7f0d008a;
+        public static final int user_challenge_sroll_view=0x7f0d0086;
         public static final int view_offset_helper=0x7f0d000e;
-        public static final int visible=0x7f0d00b4;
+        public static final int visible=0x7f0d00b9;
         public static final int withText=0x7f0d0045;
         public static final int wrap=0x7f0d0011;
         public static final int wrap_content=0x7f0d002c;
@@ -3377,6 +3382,7 @@ containing a value of this type.
         public static final int select_dialog_multichoice_material=0x7f040041;
         public static final int select_dialog_singlechoice_material=0x7f040042;
         public static final int support_simple_spinner_dropdown_item=0x7f040043;
+        public static final int user_challenge_item=0x7f040044;
     }
     public static final class menu {
         public static final int menu_main=0x7f0e0000;
@@ -3423,29 +3429,32 @@ containing a value of this type.
         public static final int app_description=0x7f070023;
         public static final int app_name=0x7f070024;
         public static final int appbar_scrolling_view_behavior=0x7f070025;
-        public static final int bottom_sheet_behavior=0x7f070026;
-        public static final int character_counter_pattern=0x7f070027;
-        public static final int current_challenge_button_label=0x7f070028;
-        public static final int error_incorrect_details=0x7f070029;
-        public static final int grade_label=0x7f07002a;
-        public static final int logout_option=0x7f07002b;
-        public static final int password_toggle_content_description=0x7f07002c;
-        public static final int path_password_eye=0x7f07002d;
-        public static final int path_password_eye_mask_strike_through=0x7f07002e;
-        public static final int path_password_eye_mask_visible=0x7f07002f;
-        public static final int path_password_strike_through=0x7f070030;
-        public static final int prompt_password=0x7f070031;
-        public static final int prompt_username=0x7f070032;
-        public static final int right_arrow=0x7f070033;
+        public static final int are_you_ready_to_begin_title=0x7f070026;
+        public static final int begin_button_text=0x7f070027;
+        public static final int bottom_sheet_behavior=0x7f070028;
+        public static final int challenge_instructions_text=0x7f070029;
+        public static final int character_counter_pattern=0x7f07002a;
+        public static final int current_challenge_button_label=0x7f07002b;
+        public static final int error_incorrect_details=0x7f07002c;
+        public static final int grade_label=0x7f07002d;
+        public static final int logout_option=0x7f07002e;
+        public static final int password_toggle_content_description=0x7f07002f;
+        public static final int path_password_eye=0x7f070030;
+        public static final int path_password_eye_mask_strike_through=0x7f070031;
+        public static final int path_password_eye_mask_visible=0x7f070032;
+        public static final int path_password_strike_through=0x7f070033;
+        public static final int prompt_password=0x7f070034;
+        public static final int prompt_username=0x7f070035;
+        public static final int right_arrow=0x7f070036;
         public static final int search_menu_title=0x7f070013;
-        public static final int signed_in_notification=0x7f070034;
+        public static final int signed_in_notification=0x7f070037;
         public static final int status_bar_notification_info_overflow=0x7f070014;
-        public static final int time_label=0x7f070035;
-        public static final int title_activity_begin_challenge=0x7f070036;
-        public static final int title_activity_home=0x7f070037;
-        public static final int title_activity_view_user_challenge=0x7f070038;
-        public static final int todays_challenge=0x7f070039;
-        public static final int users_you_follow_option=0x7f07003a;
+        public static final int time_label=0x7f070038;
+        public static final int title_activity_begin_challenge=0x7f070039;
+        public static final int title_activity_home=0x7f07003a;
+        public static final int title_activity_view_user_challenge=0x7f07003b;
+        public static final int todays_challenge=0x7f07003c;
+        public static final int users_you_follow_option=0x7f07003d;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0900a2;

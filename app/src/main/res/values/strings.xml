@@ -24,4 +24,7 @@
     <string name="title_activity_begin_challenge">BeginChallengeActivity</string>
     <string name="todays_challenge">Today\'s Challenge</string>
     <string name="title_activity_view_user_challenge">ViewUserChallengeActivity</string>
+    <string name="are_you_ready_to_begin_title">Are you ready to begin?</string>
+    <string name="begin_button_text">Let\'s begin!</string>
+    <string name="challenge_instructions_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</string>
 </resources>

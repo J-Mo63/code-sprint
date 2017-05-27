@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.sudo_code.codesprint.activity.UserChallengeActivity">
+    tools:context="com.sudo_code.codesprint.activity.UserChallengeActivity"
+    android:id="@+id/user_challenge_sroll_view">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -93,6 +94,7 @@
             android:textStyle="bold" />
 
         <android.support.v7.widget.RecyclerView
+            android:id="@+id/user_challenge_recycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
