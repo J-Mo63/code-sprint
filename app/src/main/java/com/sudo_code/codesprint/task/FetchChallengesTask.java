@@ -80,7 +80,7 @@ public class FetchChallengesTask extends AsyncTask<Void, Void, ArrayList<Challen
     protected void onPostExecute(final ArrayList<Challenge> challenges) {
         Button beginButton = (Button) mBeginChallenngeActivity.findViewById(R.id.begin_challenge_begin_button);
 
-        final Intent challengesIntent = new Intent(mBeginChallenngeActivity.getApplicationContext(), BeginChallengeActivity.class);
+        final Intent challengesIntent = new Intent(mBeginChallenngeActivity.getApplicationContext(), ChallengeActivity.class);
 
         challengesIntent.putExtra(CHALLENGES, challenges);
 
