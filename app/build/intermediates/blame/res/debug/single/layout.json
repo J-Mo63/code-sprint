@@ -112,6 +112,10 @@
         "source": "/Users/J-Mo/.android/build-cache/b4d5a83573f06938e1ee4670c4430b36e2418fd1/output/res/layout/design_menu_item_action_area.xml"
     },
     {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/appbar_following_layout.xml",
+        "source": "/Users/J-Mo/Projects/CodeSprint/app/src/main/res/layout/appbar_following_layout.xml"
+    },
+    {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/layout/abc_screen_toolbar.xml"
     },
@@ -164,6 +168,10 @@
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/layout/notification_template_icon_group.xml"
     },
     {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/user_item.xml",
+        "source": "/Users/J-Mo/Projects/CodeSprint/app/src/main/res/layout/user_item.xml"
+    },
+    {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/challenge_item.xml",
         "source": "/Users/J-Mo/Projects/CodeSprint/app/src/main/res/layout/challenge_item.xml"
     },
@@ -194,6 +202,10 @@
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
         "source": "/Users/J-Mo/.android/build-cache/b4d5a83573f06938e1ee4670c4430b36e2418fd1/output/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/activity_following.xml",
+        "source": "/Users/J-Mo/Projects/CodeSprint/app/src/main/res/layout/activity_following.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",

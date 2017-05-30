@@ -25,7 +25,7 @@ import java.util.Locale;
 public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.ViewHolder> {
 
     // Object fields
-    private List<UserChallenge> userChallenges;
+    private List<UserChallenge> mUserChallenges;
 
 
     /**
@@ -34,7 +34,7 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
      * @param userChallenges - A list of items for the recycler
      */
     public ChallengeAdapter(ArrayList<UserChallenge> userChallenges) {
-        this.userChallenges = userChallenges;
+        this.mUserChallenges = userChallenges;
     }
 
 
@@ -64,7 +64,7 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
      */
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        final UserChallenge userChallenge = userChallenges.get(position);
+        final UserChallenge userChallenge = mUserChallenges.get(position);
 
         holder.dayTextView.setText("Monday");
         holder.gradeTextView.setText(userChallenge.getGrade());
@@ -87,7 +87,7 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
      */
     @Override
     public int getItemCount() {
-        return userChallenges.size();
+        return mUserChallenges.size();
     }
 
 

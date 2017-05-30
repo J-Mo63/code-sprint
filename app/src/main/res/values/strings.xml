@@ -50,4 +50,10 @@
     <string name="question_one_label">Question 1:</string>
     <string name="question_two_label">Question 2:</string>
     <string name="question_three_label">Question 3:</string>
+
+    <!-- FOLLOWING -->
+    <string name="title_activity_following">FollowingActivity</string>
+    <string name="following_title">Users you follow</string>
+    <string name="unfollow_label">Unfollow</string>
+    <string name="unfollowed_notification_text">Unfollowed&#160;</string>
 </resources>

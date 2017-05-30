@@ -1,19 +1,13 @@
 package com.sudo_code.codesprint.adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.sudo_code.codesprint.R;
-import com.sudo_code.codesprint.activity.UserChallengeActivity;
 import com.sudo_code.codesprint.model.UserChallenge;
 
 import java.util.ArrayList;
@@ -26,7 +20,7 @@ import java.util.Locale;
 public class UserChallengeAdapter extends RecyclerView.Adapter<UserChallengeAdapter.ViewHolder> {
 
     // Object fields
-    private List<UserChallenge> userChallenges;
+    private List<UserChallenge> mUserChallenges;
 
 
     /**
@@ -35,7 +29,7 @@ public class UserChallengeAdapter extends RecyclerView.Adapter<UserChallengeAdap
      * @param userChallenges - A list of items for the recycler
      */
     public UserChallengeAdapter(ArrayList<UserChallenge> userChallenges) {
-        this.userChallenges = userChallenges;
+        this.mUserChallenges = userChallenges;
     }
 
 
@@ -65,7 +59,7 @@ public class UserChallengeAdapter extends RecyclerView.Adapter<UserChallengeAdap
      */
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        final UserChallenge userChallenge = userChallenges.get(position);
+        final UserChallenge userChallenge = mUserChallenges.get(position);
 
         holder.usernameTextView.setText(userChallenge.getUsername());
         holder.gradeTextView.setText(userChallenge.getGrade());
@@ -81,7 +75,7 @@ public class UserChallengeAdapter extends RecyclerView.Adapter<UserChallengeAdap
      */
     @Override
     public int getItemCount() {
-        return userChallenges.size();
+        return mUserChallenges.size();
     }
 
 

@@ -12,13 +12,12 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.adapter.ChallengeAdapter;
 import com.sudo_code.codesprint.model.UserChallenge;
-
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -43,16 +42,17 @@ public class HomeActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.app_name);
         setSupportActionBar(toolbar);
-        RecyclerView mRecycler = (RecyclerView) findViewById(R.id.home_recycler_view);
+        RecyclerView recycler = (RecyclerView) findViewById(R.id.home_recycler_view);
 
         // Adapter setup
+        mUserChallenges = new ArrayList<>();
         getChallenges();
         ChallengeAdapter adapter = new ChallengeAdapter(mUserChallenges);
-        mRecycler.setAdapter(adapter);
-        mRecycler.setLayoutManager(new LinearLayoutManager(this));
+        recycler.setAdapter(adapter);
+        recycler.setLayoutManager(new LinearLayoutManager(this));
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,
                 LinearLayoutManager.VERTICAL);
-        mRecycler.addItemDecoration(dividerItemDecoration);
+        recycler.addItemDecoration(dividerItemDecoration);
 
         // Intent definitions
         final Intent beginChallengeIntent = new Intent(this, BeginChallengeActivity.class);
@@ -86,12 +86,33 @@ public class HomeActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Checks which option was selected and performs the approproate actions.
+     *
+     * @param item - the selected option MenuItem
+     * @return boolean - success on normal menu processing (handled by superclass)
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_users) {
+            Intent followingIntent = new Intent(this, FollowingActivity.class);
+            startActivity(followingIntent);
+        }
+        else if (id == R.id.action_quit) {
+            Intent logoutIntent = new Intent(this, LoginActivity.class);
+            startActivity(logoutIntent);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
 
     /**
      * Populates the challenges field with UserChallenge objects.
      */
     private void getChallenges() {
-        mUserChallenges = new ArrayList<>();
         mUserChallenges.add(new UserChallenge("j-mo", new Date(), "A", 31.45));
         mUserChallenges.add(new UserChallenge("j-mo", new Date(), "C", 44.15));
         mUserChallenges.add(new UserChallenge("j-mo", new Date(), "B", 25.23));

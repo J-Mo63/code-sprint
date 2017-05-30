@@ -79,7 +79,7 @@ public class ResultsActivity extends AppCompatActivity {
      * A method that calculates the user's grade for the completed challenges.
      *
      * @return String - the grade value
-   t  */
+     */
     private String calculateGrade() {
         return "B";
     }
