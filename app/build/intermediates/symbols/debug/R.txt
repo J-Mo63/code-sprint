@@ -843,7 +843,7 @@ int id navigation_header_container 0x7f0d00a3
 int id never 0x7f0d0044
 int id none 0x7f0d0017
 int id normal 0x7f0d0019
-int id notification_background 0x7f0d00b8
+int id notification_background 0x7f0d00b7
 int id notification_main_column 0x7f0d00b2
 int id notification_main_column_container 0x7f0d00b1
 int id packed 0x7f0d0012
@@ -861,7 +861,7 @@ int id results_time_three 0x7f0d008e
 int id results_time_total 0x7f0d008f
 int id results_time_two 0x7f0d008d
 int id right 0x7f0d0035
-int id right_icon 0x7f0d00b7
+int id right_icon 0x7f0d00b8
 int id right_side 0x7f0d00b3
 int id screen 0x7f0d0028
 int id scroll 0x7f0d0024

@@ -28,7 +28,7 @@ public class Result implements Parcelable {
      * A Parcelable implementation constructor
      * @param in - the parcel being read to
      */
-    protected Result(Parcel in) {
+    private Result(Parcel in) {
         challengeId = in.readInt();
         time = in.readLong();
     }

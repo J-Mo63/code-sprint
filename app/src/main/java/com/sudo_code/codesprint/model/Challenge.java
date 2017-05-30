@@ -85,7 +85,7 @@ public class Challenge implements Parcelable {
      * A Parcelable implementation constructor
      * @param in - the parcel being read to
      */
-    protected Challenge(Parcel in) {
+    private Challenge(Parcel in) {
         id = in.readInt();
         content = in.readString();
         question = in.readString();
