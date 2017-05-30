@@ -31,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
     private ArrayList<UserChallenge> mUserChallenges;
 
     /**
-     * Defines the recycler, gets objects and populates it.
+     * Sets up the toolbar, defines the recycler, gets objects and populates it.
      *
      * @param savedInstanceState - the saved bundle state
      */

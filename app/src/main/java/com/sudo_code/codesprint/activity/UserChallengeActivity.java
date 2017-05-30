@@ -15,11 +15,20 @@ import com.sudo_code.codesprint.model.UserChallenge;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * A screen that displays the results of a past challenge completed by
+ * themselves and any users that have completed it that they follow.
+ */
 public class UserChallengeActivity extends AppCompatActivity {
 
     // Object fields
     private ArrayList<UserChallenge> mUserChallenges;
 
+    /**
+     * Sets up the toolbar, defines the recycler, gets objects and populates it.
+     *
+     * @param savedInstanceState - the saved bundle state
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +42,7 @@ public class UserChallengeActivity extends AppCompatActivity {
         RecyclerView mRecycler = (RecyclerView) findViewById(R.id.user_challenge_recycler);
 
         // Adapter setup
+        mUserChallenges = new ArrayList<>();
         getUserChallenges();
         UserChallengeAdapter adapter = new UserChallengeAdapter(mUserChallenges);
         mRecycler.setAdapter(adapter);
@@ -42,6 +52,12 @@ public class UserChallengeActivity extends AppCompatActivity {
         mRecycler.addItemDecoration(dividerItemDecoration);
     }
 
+    /**
+     * Checks which option was selected and performs the approproate actions.
+     *
+     * @param item - the selected option MenuItem
+     * @return boolean - success on normal menu processing (handled by superclass)
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home ) {
@@ -51,8 +67,10 @@ public class UserChallengeActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Populates the userChallenges field with UserChallenge objects.
+     */
     private void getUserChallenges() {
-        mUserChallenges = new ArrayList<>();
         mUserChallenges.add(new UserChallenge("dandolo", new Date(), "A", 31.45));
         mUserChallenges.add(new UserChallenge("actom360", new Date(), "C", 44.15));
         mUserChallenges.add(new UserChallenge("bb3b123", new Date(), "B", 25.23));
