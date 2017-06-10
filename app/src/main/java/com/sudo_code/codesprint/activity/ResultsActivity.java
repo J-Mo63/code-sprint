@@ -52,11 +52,13 @@ public class ResultsActivity extends AppCompatActivity {
         gradeText.setText(calculateGrade());
 
         final Intent homeIntent = new Intent(this, HomeActivity.class);
+        homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NO_HISTORY);
 
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(homeIntent);
+                finish();
             }
         });
 

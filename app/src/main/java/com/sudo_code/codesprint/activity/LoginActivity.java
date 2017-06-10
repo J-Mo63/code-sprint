@@ -22,8 +22,6 @@ public class LoginActivity extends AppCompatActivity {
     // UI fields
     private EditText mUsernameEditText;
     private EditText mPasswordEditText;
-    private View mProgressView;
-    private View mLoginFormView;
 
 
     /**
@@ -36,11 +34,13 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // Attempt to login using
+        UserLoginTask autoLogin = new UserLoginTask(null, null, this);
+        autoLogin.execute();
+
         // Set up the login form.
         mUsernameEditText = (EditText) findViewById(R.id.login_username_edit_text);
         mPasswordEditText = (EditText) findViewById(R.id.login_password_edit_text);
-        mLoginFormView = findViewById(R.id.login_form);
-        mProgressView = findViewById(R.id.login_progress);
 
         // On submitting login form through button
         Button mUsernameSignInButton = (Button) findViewById(R.id.login_sign_in_button);
@@ -107,22 +107,10 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
         }
         else {
-            // Show a progress spinner, and kick off a background task to
-            // perform the user login attempt.
-            showProgress();
+            // Kick off a background task to perform the user login attempt.
             UserLoginTask authTask = new UserLoginTask(username, password, LoginActivity.this);
             authTask.execute();
         }
-    }
-
-
-    /**
-     * Shows the progress UI and hides the login form.
-     */
-    public void showProgress() {
-        findViewById(R.id.login_description_textview).setVisibility(View.GONE);
-        mLoginFormView.setVisibility(View.GONE);
-        mProgressView.setVisibility(View.VISIBLE);
     }
 }
 

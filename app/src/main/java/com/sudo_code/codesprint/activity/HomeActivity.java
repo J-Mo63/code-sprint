@@ -1,10 +1,12 @@
 package com.sudo_code.codesprint.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -102,7 +104,10 @@ public class HomeActivity extends AppCompatActivity {
         }
         else if (id == R.id.action_quit) {
             Intent logoutIntent = new Intent(this, LoginActivity.class);
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+            prefs.edit().clear().apply();
             startActivity(logoutIntent);
+            finish();
         }
 
         return super.onOptionsItemSelected(item);

@@ -90,6 +90,7 @@ public class FetchChallengesTask extends AsyncTask<Void, Void, ArrayList<Challen
             @Override
             public void onClick(View view) {
                 mBeginChallenngeActivity.startActivity(challengesIntent);
+                mBeginChallenngeActivity.finish();
             }
         });
 

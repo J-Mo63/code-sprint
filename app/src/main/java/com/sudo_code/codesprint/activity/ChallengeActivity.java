@@ -93,6 +93,7 @@ public class ChallengeActivity extends Activity {
 
                 // Show the results
                 startActivity(resultsIntent);
+                finish();
             }
         }
         // If it is incorrect
@@ -127,5 +128,4 @@ public class ChallengeActivity extends Activity {
 
         mResults.add(new Result(mCurrentChallenge.getId(), elapsedTime));
     }
-
 }
