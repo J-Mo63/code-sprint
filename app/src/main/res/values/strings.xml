@@ -9,6 +9,7 @@
     <string name="error_incorrect_details">Username or password incorrect</string>
     <string name="app_description">CodeSprint is a platform that allows users to exercise their mind with simple coding-based userChallenges made to be done fast.</string>
     <string name="signed_in_notification">Signed in successfully</string>
+    <string name="sign_up_button_text">Sign Up</string>
 
     <!-- HOME -->
     <string name="title_activity_home">Home</string>
@@ -56,4 +57,13 @@
     <string name="following_title">Users you follow</string>
     <string name="unfollow_label">Unfollow</string>
     <string name="unfollowed_notification_text">Unfollowed&#160;</string>
+
+    <!-- ADD USER -->
+    <string name="title_activity_add_user">AddUserActivity</string>
+    <string name="sign_up_title">Sign up to CodeSprint</string>
+    <string name="sign_up_description">Sign up to CodeSprint with a username and password combination.</string>
+    <string name="signup_username_prompt">Choose a cool username</string>
+    <string name="signup_password_prompt">Choose a secure password</string>
+    <string name="signed_up_notification">Signed up successfully - please login</string>
+    <string name="error_cant_signup">There was an error signing you up</string>
 </resources>

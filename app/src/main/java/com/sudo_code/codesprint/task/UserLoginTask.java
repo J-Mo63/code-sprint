@@ -12,7 +12,7 @@ import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.activity.HomeActivity;
 
 /**
- * Represents an asynchronous login/registration task used to authenticate
+ * Represents an asynchronous login task used to authenticate
  * the user.
  */
 public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
@@ -104,7 +104,6 @@ public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
             // Open to the home activity
             Intent intent = new Intent(mLoginActivity, HomeActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NO_HISTORY);
 
             if (!mIsAuto) {
                 Toast.makeText(mLoginActivity.getApplicationContext(),
@@ -136,7 +135,7 @@ public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
 
     /**
-     *  Shows and hides the login form / progress bar.
+     * Shows and hides the login form / progress bar.
      *
      * @param show - whether to show or not
      */

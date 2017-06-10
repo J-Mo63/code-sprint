@@ -1,5 +1,6 @@
 package com.sudo_code.codesprint.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -43,11 +44,23 @@ public class LoginActivity extends AppCompatActivity {
         mPasswordEditText = (EditText) findViewById(R.id.login_password_edit_text);
 
         // On submitting login form through button
-        Button mUsernameSignInButton = (Button) findViewById(R.id.login_sign_in_button);
-        mUsernameSignInButton.setOnClickListener(new OnClickListener() {
+        Button usernameSignInButton = (Button) findViewById(R.id.login_sign_in_button);
+        Button usernameSignUpButton = (Button) findViewById(R.id.login_sign_up_button);
+
+        // Intent definitions
+        final Intent signupIntent = new Intent(this, AddUserActivity.class);
+
+        usernameSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 attemptLogin();
+            }
+        });
+
+        usernameSignUpButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(signupIntent);
             }
         });
 
@@ -98,7 +111,7 @@ public class LoginActivity extends AppCompatActivity {
 
         if (cancel) {
             // There was an error; don't attempt login and focus the first
-            // form field with an error.
+            // form field with an error
             if (focusView != null) {
                 focusView.requestFocus();
             }
@@ -107,7 +120,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.LENGTH_SHORT).show();
         }
         else {
-            // Kick off a background task to perform the user login attempt.
+            // Kick off a background task to perform the user login attempt
             UserLoginTask authTask = new UserLoginTask(username, password, LoginActivity.this);
             authTask.execute();
         }
