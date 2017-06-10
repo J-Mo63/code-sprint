@@ -697,6 +697,7 @@
     <string name="error_cant_signup">There was an error signing you up</string>
     <string name="error_incorrect_details">Username or password incorrect</string>
     <string name="finished_downloading_notification">Challenges finished downloading</string>
+    <string name="follow_user_title">Follow a User</string>
     <string name="following_title">Users you follow</string>
     <string name="grade_label">Grade:</string>
     <string name="logout_option">Logout</string>

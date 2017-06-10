@@ -1,5 +1,7 @@
 package com.sudo_code.codesprint.activity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -12,11 +14,15 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.adapter.ChallengeAdapter;
 import com.sudo_code.codesprint.model.UserChallenge;
@@ -109,6 +115,9 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(logoutIntent);
             finish();
         }
+        else if (id == R.id.action_add_user) {
+            showAddUserDialogue();
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -124,4 +133,35 @@ public class HomeActivity extends AppCompatActivity {
         mUserChallenges.add(new UserChallenge("j-mo", new Date(), "D", 89.01));
     }
 
+
+    /**
+     * Displays an alert dialogue allowing the user to follow another user.
+     */
+    protected void showAddUserDialogue() {
+        // Setup the view
+        LayoutInflater layoutInflater = LayoutInflater.from(HomeActivity.this);
+        View promptView = layoutInflater.inflate(R.layout.follow_input_dialog, null);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(HomeActivity.this);
+        alertDialogBuilder.setView(promptView);
+
+        final EditText usernameText = (EditText) promptView.findViewById(R.id.follow_username);
+
+        // Setup a dialog window
+        alertDialogBuilder.setCancelable(false)
+                .setPositiveButton(R.string.follow_user_submit, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // Do stuff
+                    }
+                })
+                .setNegativeButton(R.string.follow_user_cancel,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+
+        // Create the alert dialog
+        AlertDialog alert = alertDialogBuilder.create();
+        alert.show();
+    }
 }

@@ -66,4 +66,9 @@
     <string name="signup_password_prompt">Choose a secure password</string>
     <string name="signed_up_notification">Signed up successfully - please login</string>
     <string name="error_cant_signup">There was an error signing you up</string>
+
+    <!-- FOLLOW USER -->
+    <string name="follow_user_title">Follow a User</string>
+    <string name="follow_user_submit">Submit</string>
+    <string name="follow_user_cancel">Cancel</string>
 </resources>
