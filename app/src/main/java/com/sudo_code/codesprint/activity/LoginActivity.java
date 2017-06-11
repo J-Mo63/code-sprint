@@ -17,10 +17,13 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.sudo_code.codesprint.R;
 
 /**
@@ -45,11 +48,11 @@ public class LoginActivity extends AppCompatActivity {
     // Authentication objects
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    private FirebaseUser user;
 
 
     /**
-     * Defines login form fields and sets up triggers
+     * Defines login form fields, sets up triggers and initialises authentication.
+     * Will attempt an autoLogin once.
      *
      * @param savedInstanceState - the saved bundle state
      */
@@ -112,7 +115,6 @@ public class LoginActivity extends AppCompatActivity {
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                user = firebaseAuth.getCurrentUser();
             }
         };
 
@@ -120,13 +122,29 @@ public class LoginActivity extends AppCompatActivity {
         attemptAutoLogin();
     }
 
+    /**
+     * On starting the activity, connect the AuthStateListener.
+     */
     @Override
     public void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
     }
 
+    /**
+     * On stopping the activity, disconnect the AuthStateListener.
+     */
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.addAuthStateListener(mAuthListener);
+        }
+    }
 
+    /**
+     * Attempts to discretely log the user in using stored details
+     */
     private void attemptAutoLogin() {
 
         // Fetch previously stored details
@@ -168,13 +186,21 @@ public class LoginActivity extends AppCompatActivity {
                             }
                             else {
                                 // Display login form again
-                                Toast.makeText(getApplicationContext(),
-                                        R.string.error_cant_signup,
-                                        Toast.LENGTH_SHORT).show();
                                 showForm(true);
                             }
                         }
-            });
+            })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            String feedback = "There was a problem signing you up...";
+                            if (e instanceof FirebaseAuthUserCollisionException) {
+                                feedback = "This email is already in use";
+                            }
+                            Toast.makeText(getApplicationContext(), feedback,
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    });
         }
     }
 
@@ -203,24 +229,32 @@ public class LoginActivity extends AppCompatActivity {
 
                                 // Open to the home activity
                                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-
-//                                if (!mIsAuto) {
                                 Toast.makeText(getApplicationContext(),
-                                        getString(R.string.signed_in_notification) + user.getEmail(),
+                                        getString(R.string.signed_in_notification),
                                         Toast.LENGTH_SHORT).show();
-//                                }
                                 startActivity(intent);
                                 finish();
                             }
                             else {
                                 // Display login form again
-                                Toast.makeText(getApplicationContext(),
-                                        R.string.error_incorrect_details,
-                                        Toast.LENGTH_SHORT).show();
                                 showForm(true);
                             }
                         }
-            });
+            })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            String feedback = "There was a problem signing you in...";
+                            if (e instanceof FirebaseAuthInvalidUserException) {
+                                feedback = "Email does not exist (in our system)";
+                            }
+                            else if (e instanceof FirebaseAuthInvalidCredentialsException) {
+                                feedback = "Password incorrect";
+                            }
+                            Toast.makeText(getApplicationContext(), feedback,
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    });
         }
     }
 

@@ -780,7 +780,7 @@
     <string name="sign_up_button_text">Sign Up</string>
     <string name="sign_up_description">Sign up to CodeSprint with a username and password combination.</string>
     <string name="sign_up_title">Sign up to CodeSprint</string>
-    <string name="signed_in_notification">Signed in successfully as </string>
+    <string name="signed_in_notification">Signed in successfully</string>
     <string name="signed_up_notification">Signed up successfully - please login</string>
     <string name="signup_password_prompt">Choose a secure password</string>
     <string name="signup_username_prompt">Choose a cool username</string>

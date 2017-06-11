@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="513c555e4e8d4173efc50803bbb7ab2d365c7140">
+        sha1="c34a452c9d0c5f099b0cb53586270ffb4e1ac532">
         <dex dex="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ec631d89d9e3d1de151b09388b03922048c25cca/classes.dex" />
     </item>
     <item
