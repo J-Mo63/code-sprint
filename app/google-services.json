@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "47975055047",
+    "firebase_url": "https://codesprint-e5f09.firebaseio.com",
+    "project_id": "codesprint-e5f09",
+    "storage_bucket": "codesprint-e5f09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47975055047:android:8d2dafdf6bbf0e8f",
+        "android_client_info": {
+          "package_name": "com.sudo_code.codesprint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47975055047-f11k547q48gbs8l0p3iubbi8dmsac0qb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sudo_code.codesprint",
+            "certificate_hash": "fa1e161fe1402622787e7117b9b31e9be2bcc5fd"
+          }
+        },
+        {
+          "client_id": "47975055047-v19hsnhgftc9m70h9vmkts11p61je9jh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjy7zTcbCDpyIICGZ1b9o9udJdYZvASPA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47975055047-v19hsnhgftc9m70h9vmkts11p61je9jh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
