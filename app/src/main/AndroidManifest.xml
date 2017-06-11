@@ -41,9 +41,6 @@
         <activity
             android:name=".activity.FollowingActivity"
             android:label="@string/title_activity_following" />
-        <activity
-            android:name=".activity.AddUserActivity"
-            android:label="@string/title_activity_add_user"></activity>
     </application>
 
 </manifest>

@@ -3,12 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/J-Mo/.android/build-cache/0455c4b0aa8cbd406fb44b0343b7c0698dc70b31/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="7e1ebcd112236fb437cd674c6132da041ef4c392">
-        <dex dex="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ec631d89d9e3d1de151b09388b03922048c25cca/classes.dex" />
+        sha1="fa472b7cbd3897bf6bed6068ac0b00e494987688">
+        <dex dex="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_374669183583056e0fbbeee151705979b6af85ee/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -18,6 +18,96 @@
         revision="25.0.2"
         sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
         <dex dex="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_54f0c7b2b3d88ccd2e191033a0760032be3de1cd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/J-Mo/.android/build-cache/80dd68c8b5e690889987f560852f364ba779744f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="79e298d7fed2fcada58da7032d07d34ee198a545">
+        <dex dex="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fd3a02f16133e7d7daca716cc0658c4b82a08f13/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/J-Mo/.android/build-cache/f092f6854ced7aa0bcedef16a8db21f0f0a0d37f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
+        <dex dex="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6a7f941689785d46199669e4ae4c85b27d7de9bd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/J-Mo/.android/build-cache/9ae455d5bbd9306ec156a387c6fc5105e792003b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9919563cffd8e3732e944d3c437d4b9575a08448">
+        <dex dex="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_051072a1bd6a8fe2979a4aa650c9335a365442f3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/J-Mo/.android/build-cache/6218229245309fed8e384ccdf6aca803cf72a894/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="51a11c41a08f099a204e1b8dcc04f27217de50ec">
+        <dex dex="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_51d03b759274d4a440029529a89cfb1de9a33ef0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="513c555e4e8d4173efc50803bbb7ab2d365c7140">
+        <dex dex="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ec631d89d9e3d1de151b09388b03922048c25cca/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/J-Mo/.android/build-cache/fe49bee691d1a9124e268fbe613f6deb880455f5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a511c684ea4c2cf31a3377d51e7677cb76696e07">
+        <dex dex="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b0baff6c0e19084eb8116bc96c89604bee0540f1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/J-Mo/.android/build-cache/23c0dd3b11237926443919a85d0d932d97c07333/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="568d5bda0b4d51f90d978ace369bb9ad024d2057">
+        <dex dex="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3f86d9bf71576425ddf4389b952806f5135e9873/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/J-Mo/.android/build-cache/390236f5f7672939f18e5b94bc4a48078046bdb5/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4022261eeea0d92eb2997a68d2c1f084a16abad9">
+        <dex dex="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_71a98c56ba8bbe528a49178c2e3ec6f61a07de4d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/J-Mo/.android/build-cache/f05918e02c34025ffd536f029cf5761754067c86/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b3d0809a742c5f768c6aa9efc6decd5c1d6cd227">
+        <dex dex="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fc804c52a14e3cb39e80d7217a10f3a24cdc44af/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/J-Mo/.android/build-cache/44bd3de059bb537caf905758d42d165a3500a50c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="94d9cedd04b124aed044ac71c451a292856d854c">
+        <dex dex="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_11a6105732d369a288ffcd45a2e8ce9dca552fc8/classes.dex" />
     </item>
 
 </items>

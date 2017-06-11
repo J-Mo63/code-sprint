@@ -8,8 +8,9 @@
     <string name="action_sign_in">Sign in</string>
     <string name="error_incorrect_details">Username or password incorrect</string>
     <string name="app_description">CodeSprint is a platform that allows users to exercise their mind with simple coding-based userChallenges made to be done fast.</string>
-    <string name="signed_in_notification">Signed in successfully</string>
+    <string name="signed_in_notification">Signed in successfully as&#160;</string>
     <string name="sign_up_button_text">Sign Up</string>
+    <string name="form_error">Please enter a&#160;</string>
 
     <!-- HOME -->
     <string name="title_activity_home">Home</string>
