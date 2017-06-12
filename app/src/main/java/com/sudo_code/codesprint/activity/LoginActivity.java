@@ -24,6 +24,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.sudo_code.codesprint.R;
 
 /**
@@ -193,9 +194,12 @@ public class LoginActivity extends AppCompatActivity {
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            String feedback = "There was a problem signing you up...";
+                            String feedback = getString(R.string.signup_error_generic);
                             if (e instanceof FirebaseAuthUserCollisionException) {
-                                feedback = "This email is already in use";
+                                feedback = getString(R.string.signup_error_email_collision);
+                            }
+                            else if (e instanceof FirebaseAuthWeakPasswordException) {
+                                feedback = getString(R.string.signup_error_simple_password);
                             }
                             Toast.makeText(getApplicationContext(), feedback,
                                     Toast.LENGTH_SHORT).show();
@@ -244,12 +248,12 @@ public class LoginActivity extends AppCompatActivity {
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            String feedback = "There was a problem signing you in...";
+                            String feedback = getString(R.string.signin_error_generic);
                             if (e instanceof FirebaseAuthInvalidUserException) {
-                                feedback = "Email does not exist (in our system)";
+                                feedback = getString(R.string.signin_error_no_user);
                             }
                             else if (e instanceof FirebaseAuthInvalidCredentialsException) {
-                                feedback = "Password incorrect";
+                                feedback = getString(R.string.signin_error_bad_password);
                             }
                             Toast.makeText(getApplicationContext(), feedback,
                                     Toast.LENGTH_SHORT).show();
