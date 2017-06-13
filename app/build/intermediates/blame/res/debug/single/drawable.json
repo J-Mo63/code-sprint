@@ -5,15 +5,15 @@
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_dark.xml",
-        "source": "/Users/J-Mo/.android/build-cache/44bd3de059bb537caf905758d42d165a3500a50c/output/res/drawable/common_plus_signin_btn_text_dark.xml"
-    },
-    {
-        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
-        "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/abc_ic_search_api_material.xml"
+        "source": "/Users/J-Mo/.android/build-cache/8d5834868aa3bd430938302b258aae228d2acbd2/output/res/drawable/common_plus_signin_btn_text_dark.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/abc_ic_search_api_material.xml",
+        "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/abc_ic_search_api_material.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/navigation_empty_icon.xml",
@@ -40,6 +40,10 @@
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/abc_btn_check_material.xml"
     },
     {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_focused.xml",
+        "source": "/Users/J-Mo/.android/build-cache/7915b56eaca45e0d58c7daef19033f1db8609e07/output/res/drawable/common_google_signin_btn_text_light_focused.xml"
+    },
+    {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
         "source": "/Users/J-Mo/.android/build-cache/b4d5a83573f06938e1ee4670c4430b36e2418fd1/output/res/drawable/design_snackbar_background.xml"
     },
@@ -56,6 +60,10 @@
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/abc_item_background_holo_dark.xml"
     },
     {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/Users/J-Mo/.android/build-cache/091865cb2e6958af24cc8da65be8e9f95aa036e5/output/res/drawable/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/abc_ic_ab_back_material.xml",
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/abc_ic_ab_back_material.xml"
     },
@@ -65,7 +73,7 @@
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_dark.xml",
-        "source": "/Users/J-Mo/.android/build-cache/44bd3de059bb537caf905758d42d165a3500a50c/output/res/drawable/common_plus_signin_btn_icon_dark.xml"
+        "source": "/Users/J-Mo/.android/build-cache/8d5834868aa3bd430938302b258aae228d2acbd2/output/res/drawable/common_plus_signin_btn_icon_dark.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/design_password_eye.xml",
@@ -80,12 +88,24 @@
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/abc_ratingbar_material.xml"
     },
     {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_normal.xml",
+        "source": "/Users/J-Mo/.android/build-cache/091865cb2e6958af24cc8da65be8e9f95aa036e5/output/res/drawable/common_google_signin_btn_icon_dark_normal.xml"
+    },
+    {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/abc_seekbar_tick_mark_material.xml"
     },
     {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_disabled.xml",
+        "source": "/Users/J-Mo/.android/build-cache/091865cb2e6958af24cc8da65be8e9f95aa036e5/output/res/drawable/common_google_signin_btn_text_disabled.xml"
+    },
+    {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_focused.xml",
+        "source": "/Users/J-Mo/.android/build-cache/7915b56eaca45e0d58c7daef19033f1db8609e07/output/res/drawable/common_google_signin_btn_icon_light_focused.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
@@ -97,7 +117,19 @@
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
-        "source": "/Users/J-Mo/.android/build-cache/44bd3de059bb537caf905758d42d165a3500a50c/output/res/drawable/common_google_signin_btn_icon_dark.xml"
+        "source": "/Users/J-Mo/.android/build-cache/7915b56eaca45e0d58c7daef19033f1db8609e07/output/res/drawable/common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark_focused.xml",
+        "source": "/Users/J-Mo/.android/build-cache/7915b56eaca45e0d58c7daef19033f1db8609e07/output/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
+    },
+    {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_disabled.xml",
+        "source": "/Users/J-Mo/.android/build-cache/091865cb2e6958af24cc8da65be8e9f95aa036e5/output/res/drawable/common_google_signin_btn_icon_disabled.xml"
+    },
+    {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light_normal.xml",
+        "source": "/Users/J-Mo/.android/build-cache/091865cb2e6958af24cc8da65be8e9f95aa036e5/output/res/drawable/common_google_signin_btn_icon_light_normal.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
@@ -109,7 +141,7 @@
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
-        "source": "/Users/J-Mo/.android/build-cache/44bd3de059bb537caf905758d42d165a3500a50c/output/res/drawable/common_google_signin_btn_text_light.xml"
+        "source": "/Users/J-Mo/.android/build-cache/7915b56eaca45e0d58c7daef19033f1db8609e07/output/res/drawable/common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
@@ -117,7 +149,7 @@
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_light.xml",
-        "source": "/Users/J-Mo/.android/build-cache/44bd3de059bb537caf905758d42d165a3500a50c/output/res/drawable/common_plus_signin_btn_text_light.xml"
+        "source": "/Users/J-Mo/.android/build-cache/8d5834868aa3bd430938302b258aae228d2acbd2/output/res/drawable/common_plus_signin_btn_text_light.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
@@ -137,7 +169,7 @@
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
-        "source": "/Users/J-Mo/.android/build-cache/44bd3de059bb537caf905758d42d165a3500a50c/output/res/drawable/common_google_signin_btn_text_dark.xml"
+        "source": "/Users/J-Mo/.android/build-cache/7915b56eaca45e0d58c7daef19033f1db8609e07/output/res/drawable/common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/abc_ic_go_search_api_material.xml",
@@ -160,16 +192,24 @@
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/abc_edit_text_material.xml"
     },
     {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark_focused.xml",
+        "source": "/Users/J-Mo/.android/build-cache/7915b56eaca45e0d58c7daef19033f1db8609e07/output/res/drawable/common_google_signin_btn_text_dark_focused.xml"
+    },
+    {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
-        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
-        "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/abc_spinner_textfield_background_material.xml"
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_normal.xml",
+        "source": "/Users/J-Mo/.android/build-cache/091865cb2e6958af24cc8da65be8e9f95aa036e5/output/res/drawable/common_google_signin_btn_text_light_normal.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
-        "source": "/Users/J-Mo/.android/build-cache/44bd3de059bb537caf905758d42d165a3500a50c/output/res/drawable/common_google_signin_btn_icon_light.xml"
+        "source": "/Users/J-Mo/.android/build-cache/7915b56eaca45e0d58c7daef19033f1db8609e07/output/res/drawable/common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/abc_spinner_textfield_background_material.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
@@ -184,12 +224,12 @@
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/notification_bg.xml"
     },
     {
-        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
-        "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/notification_tile_bg.xml"
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_light.xml",
+        "source": "/Users/J-Mo/.android/build-cache/8d5834868aa3bd430938302b258aae228d2acbd2/output/res/drawable/common_plus_signin_btn_icon_light.xml"
     },
     {
-        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_light.xml",
-        "source": "/Users/J-Mo/.android/build-cache/44bd3de059bb537caf905758d42d165a3500a50c/output/res/drawable/common_plus_signin_btn_icon_light.xml"
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
+        "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/drawable/notification_tile_bg.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable/notification_icon_background.xml",

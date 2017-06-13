@@ -1,7 +1,6 @@
 package com.sudo_code.codesprint.activity;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,13 +9,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.sudo_code.codesprint.R;
-import com.sudo_code.codesprint.adapter.ChallengeAdapter;
 import com.sudo_code.codesprint.adapter.FollowingAdapter;
 import com.sudo_code.codesprint.model.User;
-import com.sudo_code.codesprint.model.UserChallenge;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 /**
  * A screen that displays all users being followed by the currently logged in user
@@ -72,11 +68,12 @@ public class FollowingActivity extends AppCompatActivity {
      * Populates the users field with User objects.
      */
     private void getFollowing() {
-        mFollowing.add(new User(1, "j-mo"));
-        mFollowing.add(new User(1, "bb3b123"));
-        mFollowing.add(new User(1, "dandolo"));
-        mFollowing.add(new User(1, "actom360"));
-        mFollowing.add(new User(1, "oldie"));
+        String id = "1a4a2";
+        mFollowing.add(new User(id, "j-mo"));
+        mFollowing.add(new User(id, "bb3b123"));
+        mFollowing.add(new User(id, "dandolo"));
+        mFollowing.add(new User(id, "actom360"));
+        mFollowing.add(new User(id, "oldie"));
     }
 
 }

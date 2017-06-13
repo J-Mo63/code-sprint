@@ -26,6 +26,7 @@ import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.sudo_code.codesprint.R;
+import com.sudo_code.codesprint.task.DatabaseController;
 
 /**
  * A login screen that offers login via username/password.
@@ -45,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
 
     // Object fields
     private SharedPreferences mSharedPrefs;
+    private DatabaseController mDbController;
 
     // Authentication objects
     private FirebaseAuth mAuth;
@@ -119,6 +121,9 @@ public class LoginActivity extends AppCompatActivity {
             }
         };
 
+        // Create a new DB Controller instance
+        mDbController = new DatabaseController(this);
+
         // Automatically attempt to login using stored details
         attemptAutoLogin();
     }
@@ -181,6 +186,12 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+                                // Add the user to the database
+                                try {
+                                    mDbController.createUser(mAuth.getCurrentUser().getUid(), username);
+                                }
+                                catch (NullPointerException e) {}
+
                                 // Log the user in
                                 showForm(false);
                                 attemptLogin(username, password);

@@ -9,6 +9,7 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -22,10 +23,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
+import com.firebase.client.Firebase;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.adapter.ChallengeAdapter;
 import com.sudo_code.codesprint.model.UserChallenge;
+import com.sudo_code.codesprint.model.UserFollow;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -37,6 +41,14 @@ public class HomeActivity extends AppCompatActivity {
 
     // Object fields
     private ArrayList<UserChallenge> mUserChallenges;
+
+    // Authentication fields
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private FirebaseUser currentUser;
+
+    // Firebase fields
+    private Firebase mFirebaseUserFollow;
 
     /**
      * Sets up the toolbar, defines the recycler, gets objects and populates it.
@@ -73,6 +85,19 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(beginChallengeIntent);
             }
         });
+
+        // Set up authentication components
+        mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                currentUser = firebaseAuth.getCurrentUser();
+            }
+        };
+
+        // Firebase stuff
+        Firebase.setAndroidContext(this);
+        mFirebaseUserFollow = new Firebase("https://codesprint-e5f09.firebaseio.com/UserFollow");
     }
 
 
@@ -122,6 +147,15 @@ public class HomeActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * On starting the activity, connect the AuthStateListener.
+     */
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+
 
     /**
      * Populates the challenges field with UserChallenge objects.
@@ -150,7 +184,12 @@ public class HomeActivity extends AppCompatActivity {
         alertDialogBuilder.setCancelable(false)
                 .setPositiveButton(R.string.follow_user_submit, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        // Do stuff
+                        String currentUid = currentUser.getUid();
+                        String enteredUsername = usernameText.getText().toString();
+
+                        Firebase newEntry = mFirebaseUserFollow.push();
+
+                        newEntry.setValue(new UserFollow(currentUid, enteredUsername));
                     }
                 })
                 .setNegativeButton(R.string.follow_user_cancel,

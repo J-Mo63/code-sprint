@@ -7,15 +7,15 @@ package com.sudo_code.codesprint.model;
 public class User {
 
     // Class fields
-    private int id;
+    private String id;
     private String username;
 
-    public User(int id, String username) {
+    public User(String id, String username) {
         this.id = id;
         this.username = username;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
