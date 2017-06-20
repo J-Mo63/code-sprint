@@ -92,8 +92,8 @@ public class LoginActivity extends AppCompatActivity {
         usernameSignUpButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                showForm(false);
-                attemptSignup();
+                Intent signupIntent = new Intent(getApplicationContext(), AddUserActivity.class);
+                startActivity(signupIntent);
             }
         });
 
@@ -166,61 +166,6 @@ public class LoginActivity extends AppCompatActivity {
 
 
     /**
-     * Attempts to sign up.
-     * If there are form errors (missing fields, etc.), the
-     * errors are presented and no actual signup attempt is made.
-     */
-    private void attemptSignup() {
-        // Store values at the time of the signup attempt.
-        final String username = mUsernameEditText.getText().toString();
-        final String password = mPasswordEditText.getText().toString();
-
-        if (formHasErrors(username, password)) {
-            focusErrors(username, password);
-            showForm(true);
-        }
-        else {
-            // Kick off a background task to perform the user signup attempt
-            mAuth.createUserWithEmailAndPassword(username, password).addOnCompleteListener(this,
-                    new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
-                                // Add the user to the database
-                                try {
-                                    mDbController.createUser(mAuth.getCurrentUser().getUid(), username);
-                                }
-                                catch (NullPointerException e) {}
-
-                                // Log the user in
-                                showForm(false);
-                                attemptLogin(username, password);
-                            }
-                            else {
-                                // Display login form again
-                                showForm(true);
-                            }
-                        }
-            })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            String feedback = getString(R.string.signup_error_generic);
-                            if (e instanceof FirebaseAuthUserCollisionException) {
-                                feedback = getString(R.string.signup_error_email_collision);
-                            }
-                            else if (e instanceof FirebaseAuthWeakPasswordException) {
-                                feedback = getString(R.string.signup_error_simple_password);
-                            }
-                            Toast.makeText(getApplicationContext(), feedback,
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    });
-        }
-    }
-
-
-    /**
      * Attempts to sign in.
      * If there are form errors (missing fields, etc.), the
      * errors are presented and no actual login attempt is made.
@@ -268,6 +213,9 @@ public class LoginActivity extends AppCompatActivity {
                             }
                             Toast.makeText(getApplicationContext(), feedback,
                                     Toast.LENGTH_SHORT).show();
+                            SharedPreferences prefs = PreferenceManager
+                                    .getDefaultSharedPreferences(getApplicationContext());
+                            prefs.edit().clear().apply();
                         }
                     });
         }
