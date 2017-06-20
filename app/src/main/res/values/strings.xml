@@ -79,5 +79,6 @@
     <string name="no_user_found_error">No user by that name found</string>
     <string name="followed_text">Following&#160;</string>
     <string name="already_following_error">You already follow&#160;</string>
-    <string name="following_yourself_meme">You now follow yourself... good work?</string>
+    <string name="following_yourself_meme">You now follow yourself… good work?</string>
+    <string name="error_occurred_super_general">An error occurred</string>
 </resources>

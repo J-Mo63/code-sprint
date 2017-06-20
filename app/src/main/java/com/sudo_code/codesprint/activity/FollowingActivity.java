@@ -8,11 +8,13 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.firebase.ui.database.FirebaseIndexRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.sudo_code.codesprint.R;
-import com.sudo_code.codesprint.adapter.FollowingAdapter;
+import com.sudo_code.codesprint.adapter.UserFollowHolder;
 import com.sudo_code.codesprint.model.User;
-
-import java.util.ArrayList;
 
 /**
  * A screen that displays all users being followed by the currently logged in user
@@ -21,7 +23,7 @@ import java.util.ArrayList;
 public class FollowingActivity extends AppCompatActivity {
 
     // Object fields
-    private ArrayList<User> mFollowing;
+    private FirebaseRecyclerAdapter mAdapter;
 
     /**
      * Sets up the toolbar, defines the recycler, gets objects and populates it.
@@ -38,11 +40,19 @@ public class FollowingActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         RecyclerView recycler = (RecyclerView) findViewById(R.id.following_recycler);
 
+        DatabaseReference db = FirebaseDatabase.getInstance().getReference();
+        mAdapter = new FirebaseIndexRecyclerAdapter<User, UserFollowHolder>(
+                User.class, R.layout.user_item, UserFollowHolder.class,
+                db.child("User").child("lDu8Pg2NjtfHlZM0hKwlptUvbT83").child("userFollows"),
+                db.child("User")) {
+            @Override
+            public void populateViewHolder(UserFollowHolder holder, User user, int position) {
+                holder.setUsername(user.getUsername());
+            }
+        };
+
         // Adapter setup
-        mFollowing = new ArrayList<>();
-        getFollowing();
-        FollowingAdapter adapter = new FollowingAdapter(mFollowing);
-        recycler.setAdapter(adapter);
+        recycler.setAdapter(mAdapter);
         recycler.setLayoutManager(new LinearLayoutManager(this));
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,
                 LinearLayoutManager.VERTICAL);
@@ -64,16 +74,9 @@ public class FollowingActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * Populates the users field with User objects.
-     */
-    private void getFollowing() {
-        String id = "1a4a2";
-        mFollowing.add(new User(id, "j-mo"));
-        mFollowing.add(new User(id, "bb3b123"));
-        mFollowing.add(new User(id, "dandolo"));
-        mFollowing.add(new User(id, "actom360"));
-        mFollowing.add(new User(id, "oldie"));
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mAdapter.cleanup();
     }
-
 }

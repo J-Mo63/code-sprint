@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Jun 20 18:24:25 AEST 2017
+#Tue Jun 20 20:46:58 AEST 2017
 20.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 143.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 493.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
@@ -129,7 +129,7 @@
 347.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout-v17/tw__tweet.xml
 432.set=ANDROID_RESOURCE
 387.set=ANDROID_RESOURCE
-310.set=ANDROID_RESOURCE
+310.set=JAVA_RESOURCE
 211.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 561.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 233.set=ANDROID_RESOURCE
@@ -162,9 +162,9 @@
 464.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png
 264.set=DEX
 24.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/com_facebook_tooltip_black_topnub.png
-497.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout/tw__media_badge.xml
+497.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable/com_facebook_send_button_icon.xml
 142.set=ANDROID_RESOURCE
-57.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable/messenger_button_white_bg_selector.xml
+57.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-anydpi-v21/ic_googleg_color_24dp.xml
 187.set=ANDROID_RESOURCE
 361.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 532.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
@@ -195,7 +195,7 @@
 264.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ec631d89d9e3d1de151b09388b03922048c25cca/classes.dex
 418.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 471.set=ANDROID_RESOURCE
-297.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout/com_facebook_tooltip_bubble.xml
+297.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/messenger_bubble_large_blue.png
 127.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/com_facebook_button_icon_white.png
 272.set=ANDROID_RESOURCE
 161.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
@@ -203,7 +203,7 @@
 4.set=ANDROID_RESOURCE
 71.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 195.set=ANDROID_RESOURCE
-391.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/tw__heart_animation_detail_60fps_00012.png
+391.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/raw/tw__cacerts
 545.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 254.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable/tw__login_btn_light.xml
 425.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout-v17/abc_alert_dialog_title_material.xml
@@ -277,7 +277,7 @@
 358.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 375.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable/tw__login_btn.xml
 529.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
-205.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout/welcome_back_idp_prompt_layout.xml
+205.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/com_facebook_profile_picture_blank_square.png
 88.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 238.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png
 409.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/AndroidManifest.xml
@@ -368,7 +368,7 @@
 479.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 155.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/tw__heart_animation_detail_60fps_00028.png
 299.set=ANDROID_RESOURCE
-309.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar
+309.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 326.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-v21/design_bottom_navigation_item_background.xml
 222.set=ANDROID_RESOURCE
 39.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
@@ -628,7 +628,7 @@
 91.set=ANDROID_RESOURCE
 342.set=ANDROID_RESOURCE
 518.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_ratingbar_material.xml
-77.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/tw__heart_animation_detail_60fps_00051.png
+77.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/tw__heart_animation_detail_60fps_00002.png
 265.set=ANDROID_RESOURCE
 381.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 552.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
@@ -677,10 +677,10 @@
 248.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 274.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout/appbar_user_challenge_layout.xml
 5.set=ANDROID_RESOURCE
-445.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-anydpi-v21/ic_facebook_white_22dp.xml
+445.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout/messenger_button_send_white_large.xml
 196.set=ANDROID_RESOURCE
 478.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/ic_launcher.png
-38.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_register_email.xml
+38.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout/idp_button_twitter.xml
 48.set=ANDROID_RESOURCE
 171.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 342.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
@@ -870,9 +870,9 @@
 129.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 23.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/design_ic_visibility_off.png
 146.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/tw__ic_retweet_dark.png
-496.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable/com_facebook_send_button_icon.xml
+496.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout/tw__media_badge.xml
 132.set=ANDROID_RESOURCE
-56.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-anydpi-v21/ic_googleg_color_24dp.xml
+56.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable/messenger_button_white_bg_selector.xml
 177.set=ANDROID_RESOURCE
 359.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/tw__heart_animation_detail_60fps_00037.png
 89.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar/fabric/io.fabric.sdk.android.fabric.properties
@@ -911,7 +911,7 @@
 417.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 461.set=ANDROID_RESOURCE
 279.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
-296.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/messenger_bubble_large_blue.png
+296.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout/com_facebook_tooltip_bubble.xml
 126.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/tw__ic_seekbar_progress_bg.9.png
 159.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable/notification_tile_bg.xml
 262.set=ANDROID_RESOURCE
@@ -920,7 +920,7 @@
 140.set=ANDROID_RESOURCE
 70.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 185.set=ANDROID_RESOURCE
-390.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/raw/tw__cacerts
+390.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/tw__heart_animation_detail_60fps_00012.png
 544.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 227.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 393.set=ANDROID_RESOURCE
@@ -1252,7 +1252,7 @@
 113.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 546.set=ANDROID_RESOURCE
 463.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
-310.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable/common_google_signin_btn_text_disabled.xml
+310.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar/fabric/com.twitter.sdk.android.tweet-composer.properties
 146.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 23.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 496.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
@@ -1265,7 +1265,7 @@
 347.set=ANDROID_RESOURCE
 359.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 376.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_ic_search_api_material.xml
-206.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/com_facebook_profile_picture_blank_square.png
+206.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout/welcome_back_idp_prompt_layout.xml
 89.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar
 239.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout/user_challenge_item.xml
 148.set=ANDROID_RESOURCE
@@ -1600,7 +1600,7 @@ count=566
 168.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/tw__heart_animation_detail_60fps_00049.png
 352.set=ANDROID_RESOURCE
 519.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout-v17/notification_template_lines_media.xml
-78.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/tw__heart_animation_detail_60fps_00002.png
+78.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/tw__heart_animation_detail_60fps_00051.png
 520.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 275.set=ANDROID_RESOURCE
 382.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
@@ -1650,14 +1650,14 @@ count=566
 161.set=ANDROID_RESOURCE
 249.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 275.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_ratingbar_small_material.xml
-446.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout/messenger_button_send_white_large.xml
+446.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-anydpi-v21/ic_facebook_white_22dp.xml
 508.set=ANDROID_RESOURCE
 479.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/tw__heart_animation_detail_60fps_00000.png
-309.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar/fabric/com.twitter.sdk.android.tweet-composer.properties
-39.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout/idp_button_twitter.xml
+309.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/drawable/common_google_signin_btn_text_disabled.xml
+39.file=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_register_email.xml
 58.set=ANDROID_RESOURCE
-309.set=JAVA_RESOURCE
-310.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
+309.set=ANDROID_RESOURCE
+310.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar
 172.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 343.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_
 514.base=/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/resources-debug.ap_

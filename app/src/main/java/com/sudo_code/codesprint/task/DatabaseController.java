@@ -24,9 +24,7 @@ public class DatabaseController {
     private FirebaseUser currentUser;
 
     // Database references
-    private DatabaseReference mDatabase;
     private DatabaseReference mDatabaseUsers;
-    private DatabaseReference mDatabaseUserFollows;
 
     // Firebase fields
     private Firebase mFirebaseUser;
@@ -35,7 +33,7 @@ public class DatabaseController {
     // Constant fields
     private static final String DB_LINK_ADDRESS = "https://codesprint-e5f09.firebaseio.com/";
     private static final String USER_DB_REF = "User";
-    private static final String USER_FOLLOW_DB_REF = "UserFollow";
+    private static final String USER_FOLLOW_DB_REF = "userFollows";
     private static final String USERNAME_FIELD_NAME = "username";
     private static final String USER_ID_FIELD_NAME = "id";
     private static final String FOLLOWING_USERNAME_FIELD_NAME = "userId";
@@ -61,9 +59,8 @@ public class DatabaseController {
         mFirebaseUser = new Firebase(DB_LINK_ADDRESS + USER_DB_REF);
         mFirebaseUserFollow = new Firebase(DB_LINK_ADDRESS + USER_FOLLOW_DB_REF);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        mDatabaseUsers = mDatabase.child(USER_DB_REF);
-        mDatabaseUserFollows = mDatabase.child(USER_FOLLOW_DB_REF);
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+        mDatabaseUsers = database.child(USER_DB_REF);
 
         // Set up authStateListener
         mAuth.addAuthStateListener(mAuthListener);
@@ -101,14 +98,16 @@ public class DatabaseController {
 
     private void addUserFollow(final String uId, final String username) {
         final String currentUid = currentUser.getUid();
-        final Firebase newEntry = mFirebaseUserFollow.push();
+        final Firebase newEntry = mFirebaseUser.child(currentUid).child("userFollows");
+
+        DatabaseReference mDatabaseUserFollows = mDatabaseUsers.child(currentUid).child("userFollows");
 
         mDatabaseUserFollows.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 boolean found = false;
                 for(DataSnapshot data: dataSnapshot.getChildren()){
-                    if (userFollowExists(data, currentUid, uId)) {
+                    if (data.getKey().equals(currentUid)) {
                         Toast.makeText(mActivity,
                                 mActivity.getString(R.string.already_following_error) + username,
                                 Toast.LENGTH_SHORT).show();
@@ -116,7 +115,7 @@ public class DatabaseController {
                     }
                 }
                 if (!found) {
-                    newEntry.setValue(new UserFollow(currentUid, uId));
+                    newEntry.child(uId).setValue(true);
                     String msgText;
                     if (currentUid.equals(uId)) {
                         msgText = mActivity.getString(R.string.following_yourself_meme);
@@ -134,10 +133,5 @@ public class DatabaseController {
                         Toast.LENGTH_SHORT).show();
             }
         });
-    }
-
-    private boolean userFollowExists(DataSnapshot data, String currentUid, String uId) {
-        return data.child(FOLLOWING_USERNAME_FIELD_NAME).getValue().equals(currentUid) &&
-                data.child(FOLLOWED_USERNAME_FIELD_NAME).getValue().equals(uId);
     }
 }
