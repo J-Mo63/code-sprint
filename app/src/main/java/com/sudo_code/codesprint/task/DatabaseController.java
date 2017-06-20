@@ -101,7 +101,7 @@ public class DatabaseController {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 boolean found = false;
                 for(DataSnapshot data: dataSnapshot.getChildren()){
-                    if (data.getKey().equals(currentUid)) {
+                    if (data.getKey().equals(uId)) {
                         Toast.makeText(mActivity,
                                 mActivity.getString(R.string.already_following_error) + username,
                                 Toast.LENGTH_SHORT).show();
