@@ -1,13 +1,14 @@
 package com.sudo_code.codesprint.activity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-
 import com.firebase.ui.database.FirebaseIndexRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
@@ -15,6 +16,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.adapter.UserFollowHolder;
 import com.sudo_code.codesprint.model.User;
+
+import static com.sudo_code.codesprint.activity.LoginActivity.USER_ID;
 
 /**
  * A screen that displays all users being followed by the currently logged in user
@@ -43,7 +46,7 @@ public class FollowingActivity extends AppCompatActivity {
         DatabaseReference db = FirebaseDatabase.getInstance().getReference();
         mAdapter = new FirebaseIndexRecyclerAdapter<User, UserFollowHolder>(
                 User.class, R.layout.user_item, UserFollowHolder.class,
-                db.child("User").child("lDu8Pg2NjtfHlZM0hKwlptUvbT83").child("userFollows"),
+                db.child("User").child(getCurrentUserId()).child("userFollows"),
                 db.child("User")) {
             @Override
             public void populateViewHolder(UserFollowHolder holder, User user, int position) {
@@ -57,6 +60,11 @@ public class FollowingActivity extends AppCompatActivity {
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,
                 LinearLayoutManager.VERTICAL);
         recycler.addItemDecoration(dividerItemDecoration);
+    }
+
+    private String getCurrentUserId() {
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        return sharedPrefs.getString(USER_ID, null);
     }
 
     /**

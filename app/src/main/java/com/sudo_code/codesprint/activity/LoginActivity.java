@@ -23,10 +23,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
-import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
+import com.google.firebase.auth.FirebaseUser;
 import com.sudo_code.codesprint.R;
-import com.sudo_code.codesprint.task.DatabaseController;
 
 /**
  * A login screen that offers login via username/password.
@@ -36,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
     // Constants
     private static final String USERNAME = "username_tag";
     private static final String PASSWORD = "password_tag";
+    public static final String USER_ID = "user_id_tag";
 
     // UI fields
     private EditText mUsernameEditText;
@@ -46,11 +45,11 @@ public class LoginActivity extends AppCompatActivity {
 
     // Object fields
     private SharedPreferences mSharedPrefs;
-    private DatabaseController mDbController;
 
     // Authentication objects
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
+    private FirebaseUser currentUser;
 
 
     /**
@@ -118,11 +117,9 @@ public class LoginActivity extends AppCompatActivity {
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                currentUser = firebaseAuth.getCurrentUser();
             }
         };
-
-        // Create a new DB Controller instance
-        mDbController = new DatabaseController(this);
 
         // Automatically attempt to login using stored details
         attemptAutoLogin();
@@ -186,6 +183,7 @@ public class LoginActivity extends AppCompatActivity {
                                 // Save login details
                                 mSharedPrefs.edit().putString(USERNAME, username).apply();
                                 mSharedPrefs.edit().putString(PASSWORD, password).apply();
+                                mSharedPrefs.edit().putString(USER_ID, currentUser.getUid()).apply();
 
                                 // Open to the home activity
                                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);

@@ -13,7 +13,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.model.User;
-import com.sudo_code.codesprint.model.UserFollow;
 
 public class DatabaseController {
 
@@ -23,21 +22,18 @@ public class DatabaseController {
     // Authentication fields
     private FirebaseUser currentUser;
 
+    // Firebase fields
+    private Firebase mFirebaseUser;
+
     // Database references
     private DatabaseReference mDatabaseUsers;
 
-    // Firebase fields
-    private Firebase mFirebaseUser;
-    private Firebase mFirebaseUserFollow;
-
-    // Constant fields
+    // Constants
     private static final String DB_LINK_ADDRESS = "https://codesprint-e5f09.firebaseio.com/";
     private static final String USER_DB_REF = "User";
     private static final String USER_FOLLOW_DB_REF = "userFollows";
     private static final String USERNAME_FIELD_NAME = "username";
     private static final String USER_ID_FIELD_NAME = "id";
-    private static final String FOLLOWING_USERNAME_FIELD_NAME = "userId";
-    private static final String FOLLOWED_USERNAME_FIELD_NAME = "followedUserId";
 
 
     public DatabaseController(Activity activity){
@@ -57,7 +53,6 @@ public class DatabaseController {
 
         // Define database paths
         mFirebaseUser = new Firebase(DB_LINK_ADDRESS + USER_DB_REF);
-        mFirebaseUserFollow = new Firebase(DB_LINK_ADDRESS + USER_FOLLOW_DB_REF);
 
         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
         mDatabaseUsers = database.child(USER_DB_REF);
@@ -92,15 +87,14 @@ public class DatabaseController {
     }
 
     public void createUser(String id, String username) {
-        Firebase newEntry = mFirebaseUser.push();
-        newEntry.setValue(new User(id, username));
+        mFirebaseUser.child(id).setValue(new User(id, username));
     }
 
     private void addUserFollow(final String uId, final String username) {
         final String currentUid = currentUser.getUid();
-        final Firebase newEntry = mFirebaseUser.child(currentUid).child("userFollows");
+        final Firebase newEntry = mFirebaseUser.child(currentUid).child(USER_FOLLOW_DB_REF);
 
-        DatabaseReference mDatabaseUserFollows = mDatabaseUsers.child(currentUid).child("userFollows");
+        DatabaseReference mDatabaseUserFollows = mDatabaseUsers.child(currentUid).child(USER_FOLLOW_DB_REF);
 
         mDatabaseUserFollows.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
