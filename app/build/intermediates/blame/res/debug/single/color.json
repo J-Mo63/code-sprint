@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/color/com_facebook_send_button_text_color.xml",
+        "source": "/Users/J-Mo/.android/build-cache/d1f87e391d7feb9b3f58313d1ab4065443b7edd0/output/res/color/com_facebook_send_button_text_color.xml"
+    },
+    {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/color/switch_thumb_material_dark.xml"
     },
@@ -41,7 +45,7 @@
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
-        "source": "/Users/J-Mo/.android/build-cache/7915b56eaca45e0d58c7daef19033f1db8609e07/output/res/color/common_google_signin_btn_text_dark.xml"
+        "source": "/Users/J-Mo/.android/build-cache/cdd41ae89e551e57fa649f9c3e717557717b2c18/output/res/color/common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
@@ -92,16 +96,20 @@
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/color/abc_tint_edittext.xml"
     },
     {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/color/com_facebook_button_text_color.xml",
+        "source": "/Users/J-Mo/.android/build-cache/d1f87e391d7feb9b3f58313d1ab4065443b7edd0/output/res/color/com_facebook_button_text_color.xml"
+    },
+    {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/color/abc_tint_switch_thumb.xml",
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/color/abc_tint_switch_thumb.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
-        "source": "/Users/J-Mo/.android/build-cache/7915b56eaca45e0d58c7daef19033f1db8609e07/output/res/color/common_google_signin_btn_text_light.xml"
+        "source": "/Users/J-Mo/.android/build-cache/cdd41ae89e551e57fa649f9c3e717557717b2c18/output/res/color/common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
-        "source": "/Users/J-Mo/.android/build-cache/091865cb2e6958af24cc8da65be8e9f95aa036e5/output/res/color/common_google_signin_btn_tint.xml"
+        "source": "/Users/J-Mo/.android/build-cache/cdd41ae89e551e57fa649f9c3e717557717b2c18/output/res/color/common_google_signin_btn_tint.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",

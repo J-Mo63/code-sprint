@@ -1740,8 +1740,134 @@
                     "startLine": 238,
                     "startColumn": 4,
                     "startOffset": 17742,
+                    "endLine": 243,
+                    "endColumn": 12,
+                    "endOffset": 18150
+                },
+                "from": {
+                    "file": "/Users/J-Mo/.android/build-cache/cb0f0e8fd48d94c46a5d559da3342ecb336040f3/output/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 7,
+                        "endColumn": 12,
+                        "endOffset": 463
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 244,
+                    "startColumn": 4,
+                    "startOffset": 18155,
+                    "endLine": 249,
+                    "endColumn": 12,
+                    "endOffset": 18569
+                },
+                "from": {
+                    "file": "/Users/J-Mo/.android/build-cache/cb0f0e8fd48d94c46a5d559da3342ecb336040f3/output/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 468,
+                        "endLine": 13,
+                        "endColumn": 12,
+                        "endOffset": 882
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 250,
+                    "startColumn": 4,
+                    "startOffset": 18574,
+                    "endLine": 260,
+                    "endColumn": 12,
+                    "endOffset": 19276
+                },
+                "from": {
+                    "file": "/Users/J-Mo/.android/build-cache/6f3cddee4321b54b02e89c0edf57807c2deefd5e/output/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 12,
+                        "endColumn": 12,
+                        "endOffset": 757
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 261,
+                    "startColumn": 4,
+                    "startOffset": 19281,
+                    "endLine": 267,
+                    "endColumn": 12,
+                    "endOffset": 19715
+                },
+                "from": {
+                    "file": "/Users/J-Mo/.android/build-cache/6f3cddee4321b54b02e89c0edf57807c2deefd5e/output/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 762,
+                        "endLine": 19,
+                        "endColumn": 12,
+                        "endOffset": 1196
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 268,
+                    "startColumn": 4,
+                    "startOffset": 19720,
+                    "endLine": 278,
+                    "endColumn": 12,
+                    "endOffset": 20321
+                },
+                "from": {
+                    "file": "/Users/J-Mo/.android/build-cache/6f3cddee4321b54b02e89c0edf57807c2deefd5e/output/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1201,
+                        "endLine": 30,
+                        "endColumn": 12,
+                        "endOffset": 1802
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 279,
+                    "startColumn": 4,
+                    "startOffset": 20326,
+                    "endLine": 281,
+                    "endColumn": 12,
+                    "endOffset": 20489
+                },
+                "from": {
+                    "file": "/Users/J-Mo/.android/build-cache/79222305197bea295d39d96dafb0350552878bd9/output/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 4,
+                        "endColumn": 12,
+                        "endOffset": 218
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 282,
+                    "startColumn": 4,
+                    "startOffset": 20494,
                     "endColumn": 70,
-                    "endOffset": 17808
+                    "endOffset": 20560
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -1756,11 +1882,11 @@
             },
             {
                 "to": {
-                    "startLine": 239,
+                    "startLine": 283,
                     "startColumn": 4,
-                    "startOffset": 17813,
+                    "startOffset": 20565,
                     "endColumn": 82,
-                    "endOffset": 17891
+                    "endOffset": 20643
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -1775,12 +1901,12 @@
             },
             {
                 "to": {
-                    "startLine": 240,
+                    "startLine": 284,
                     "startColumn": 4,
-                    "startOffset": 17896,
-                    "endLine": 249,
+                    "startOffset": 20648,
+                    "endLine": 293,
                     "endColumn": 12,
-                    "endOffset": 18571
+                    "endOffset": 21323
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -1796,11 +1922,11 @@
             },
             {
                 "to": {
-                    "startLine": 250,
+                    "startLine": 294,
                     "startColumn": 4,
-                    "startOffset": 18576,
+                    "startOffset": 21328,
                     "endColumn": 56,
-                    "endOffset": 18628
+                    "endOffset": 21380
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -1815,11 +1941,11 @@
             },
             {
                 "to": {
-                    "startLine": 251,
+                    "startLine": 295,
                     "startColumn": 4,
-                    "startOffset": 18633,
+                    "startOffset": 21385,
                     "endColumn": 57,
-                    "endOffset": 18686
+                    "endOffset": 21438
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -1834,12 +1960,12 @@
             },
             {
                 "to": {
-                    "startLine": 252,
+                    "startLine": 296,
                     "startColumn": 4,
-                    "startOffset": 18691,
-                    "endLine": 263,
+                    "startOffset": 21443,
+                    "endLine": 307,
                     "endColumn": 12,
-                    "endOffset": 19380
+                    "endOffset": 22132
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -1855,12 +1981,12 @@
             },
             {
                 "to": {
-                    "startLine": 264,
+                    "startLine": 308,
                     "startColumn": 4,
-                    "startOffset": 19385,
-                    "endLine": 275,
+                    "startOffset": 22137,
+                    "endLine": 319,
                     "endColumn": 12,
-                    "endOffset": 20086
+                    "endOffset": 22838
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -1876,11 +2002,11 @@
             },
             {
                 "to": {
-                    "startLine": 276,
+                    "startLine": 320,
                     "startColumn": 4,
-                    "startOffset": 20091,
+                    "startOffset": 22843,
                     "endColumn": 118,
-                    "endOffset": 20205
+                    "endOffset": 22957
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -1895,11 +2021,11 @@
             },
             {
                 "to": {
-                    "startLine": 277,
+                    "startLine": 321,
                     "startColumn": 4,
-                    "startOffset": 20210,
+                    "startOffset": 22962,
                     "endColumn": 128,
-                    "endOffset": 20334
+                    "endOffset": 23086
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -1914,12 +2040,12 @@
             },
             {
                 "to": {
-                    "startLine": 278,
+                    "startLine": 322,
                     "startColumn": 4,
-                    "startOffset": 20339,
-                    "endLine": 280,
+                    "startOffset": 23091,
+                    "endLine": 324,
                     "endColumn": 12,
-                    "endOffset": 20505
+                    "endOffset": 23257
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -1935,12 +2061,12 @@
             },
             {
                 "to": {
-                    "startLine": 281,
+                    "startLine": 325,
                     "startColumn": 4,
-                    "startOffset": 20510,
-                    "endLine": 283,
+                    "startOffset": 23262,
+                    "endLine": 327,
                     "endColumn": 12,
-                    "endOffset": 20671
+                    "endOffset": 23423
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -1956,11 +2082,11 @@
             },
             {
                 "to": {
-                    "startLine": 284,
+                    "startLine": 328,
                     "startColumn": 4,
-                    "startOffset": 20676,
+                    "startOffset": 23428,
                     "endColumn": 128,
-                    "endOffset": 20800
+                    "endOffset": 23552
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -1975,12 +2101,12 @@
             },
             {
                 "to": {
-                    "startLine": 285,
+                    "startLine": 329,
                     "startColumn": 4,
-                    "startOffset": 20805,
-                    "endLine": 287,
+                    "startOffset": 23557,
+                    "endLine": 331,
                     "endColumn": 12,
-                    "endOffset": 20971
+                    "endOffset": 23723
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -1996,11 +2122,11 @@
             },
             {
                 "to": {
-                    "startLine": 288,
+                    "startLine": 332,
                     "startColumn": 4,
-                    "startOffset": 20976,
+                    "startOffset": 23728,
                     "endColumn": 130,
-                    "endOffset": 21102
+                    "endOffset": 23854
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -2015,12 +2141,12 @@
             },
             {
                 "to": {
-                    "startLine": 289,
+                    "startLine": 333,
                     "startColumn": 4,
-                    "startOffset": 21107,
-                    "endLine": 291,
+                    "startOffset": 23859,
+                    "endLine": 335,
                     "endColumn": 12,
-                    "endOffset": 21272
+                    "endOffset": 24024
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -2036,12 +2162,12 @@
             },
             {
                 "to": {
-                    "startLine": 292,
+                    "startLine": 336,
                     "startColumn": 4,
-                    "startOffset": 21277,
-                    "endLine": 294,
+                    "startOffset": 24029,
+                    "endLine": 338,
                     "endColumn": 12,
-                    "endOffset": 21447
+                    "endOffset": 24199
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -2057,12 +2183,12 @@
             },
             {
                 "to": {
-                    "startLine": 295,
+                    "startLine": 339,
                     "startColumn": 4,
-                    "startOffset": 21452,
-                    "endLine": 299,
+                    "startOffset": 24204,
+                    "endLine": 343,
                     "endColumn": 12,
-                    "endOffset": 21788
+                    "endOffset": 24540
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/values-v21/values-v21.xml",
@@ -2078,12 +2204,12 @@
             },
             {
                 "to": {
-                    "startLine": 300,
+                    "startLine": 344,
                     "startColumn": 4,
-                    "startOffset": 21793,
-                    "endLine": 302,
+                    "startOffset": 24545,
+                    "endLine": 346,
                     "endColumn": 12,
-                    "endOffset": 21986
+                    "endOffset": 24738
                 },
                 "from": {
                     "file": "/Users/J-Mo/.android/build-cache/b4d5a83573f06938e1ee4670c4430b36e2418fd1/output/res/values-v21/values-v21.xml",
@@ -2094,6 +2220,27 @@
                         "endLine": 4,
                         "endColumn": 12,
                         "endOffset": 248
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 347,
+                    "startColumn": 4,
+                    "startOffset": 24743,
+                    "endLine": 349,
+                    "endColumn": 12,
+                    "endOffset": 24884
+                },
+                "from": {
+                    "file": "/Users/J-Mo/.android/build-cache/79222305197bea295d39d96dafb0350552878bd9/output/res/values-v21/values-v21.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 223,
+                        "endLine": 7,
+                        "endColumn": 12,
+                        "endOffset": 364
                     }
                 }
             }

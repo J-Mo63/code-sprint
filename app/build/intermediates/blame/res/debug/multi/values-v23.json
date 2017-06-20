@@ -214,6 +214,27 @@
                         "endOffset": 2641
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 2646,
+                    "endLine": 39,
+                    "endColumn": 12,
+                    "endOffset": 2791
+                },
+                "from": {
+                    "file": "/Users/J-Mo/.android/build-cache/059e9a1ed9d04ae41841cf6d2fb898355cd72613/output/res/values-v23/values-v23.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 4,
+                        "endColumn": 12,
+                        "endOffset": 200
+                    }
+                }
             }
         ]
     }

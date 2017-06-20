@@ -6,5 +6,21 @@
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
         "source": "/Users/J-Mo/.android/build-cache/b4d5a83573f06938e1ee4670c4430b36e2418fd1/output/res/drawable-anydpi-v21/design_ic_visibility.xml"
+    },
+    {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_twitter_bird_white_24dp.xml",
+        "source": "/Users/J-Mo/.android/build-cache/6f3cddee4321b54b02e89c0edf57807c2deefd5e/output/res/drawable-anydpi-v21/ic_twitter_bird_white_24dp.xml"
+    },
+    {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_googleg_color_24dp.xml",
+        "source": "/Users/J-Mo/.android/build-cache/6f3cddee4321b54b02e89c0edf57807c2deefd5e/output/res/drawable-anydpi-v21/ic_googleg_color_24dp.xml"
+    },
+    {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_facebook_white_22dp.xml",
+        "source": "/Users/J-Mo/.android/build-cache/6f3cddee4321b54b02e89c0edf57807c2deefd5e/output/res/drawable-anydpi-v21/ic_facebook_white_22dp.xml"
+    },
+    {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_mail_white_24dp.xml",
+        "source": "/Users/J-Mo/.android/build-cache/6f3cddee4321b54b02e89c0edf57807c2deefd5e/output/res/drawable-anydpi-v21/ic_mail_white_24dp.xml"
     }
 ]

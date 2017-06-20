@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/anim/slide_out_left.xml",
+        "source": "/Users/J-Mo/.android/build-cache/6f3cddee4321b54b02e89c0edf57807c2deefd5e/output/res/anim/slide_out_left.xml"
+    },
+    {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
         "source": "/Users/J-Mo/.android/build-cache/b4d5a83573f06938e1ee4670c4430b36e2418fd1/output/res/anim/design_snackbar_out.xml"
     },
@@ -40,6 +44,10 @@
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/anim/abc_slide_out_bottom.xml"
     },
     {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/anim/slide_in_right.xml",
+        "source": "/Users/J-Mo/.android/build-cache/6f3cddee4321b54b02e89c0edf57807c2deefd5e/output/res/anim/slide_in_right.xml"
+    },
+    {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/anim/abc_slide_in_top.xml"
     },
@@ -52,6 +60,10 @@
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/anim/tw__accelerate_cubic.xml",
+        "source": "/Users/J-Mo/.android/build-cache/79222305197bea295d39d96dafb0350552878bd9/output/res/anim/tw__accelerate_cubic.xml"
+    },
+    {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
         "source": "/Users/J-Mo/.android/build-cache/b4d5a83573f06938e1ee4670c4430b36e2418fd1/output/res/anim/design_snackbar_in.xml"
     },
@@ -62,5 +74,9 @@
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_out.xml",
         "source": "/Users/J-Mo/.android/build-cache/b4d5a83573f06938e1ee4670c4430b36e2418fd1/output/res/anim/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/anim/tw__slide_out.xml",
+        "source": "/Users/J-Mo/.android/build-cache/79222305197bea295d39d96dafb0350552878bd9/output/res/anim/tw__slide_out.xml"
     }
 ]
