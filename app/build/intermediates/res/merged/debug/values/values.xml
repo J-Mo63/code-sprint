@@ -1036,6 +1036,7 @@
     <string name="missing_email_address">Enter your email address to continue</string>
     <string name="name_hint">First &amp; last name</string>
     <string name="next_default">Next</string>
+    <string name="no">No</string>
     <string name="no_user_found_error">No user by that name found</string>
     <string name="password_hint">Password</string>
     <string name="password_recovery_body">Get instructions sent to this email that explain how to
@@ -1054,6 +1055,7 @@
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="prompt_username">Username</string>
+    <string name="question_mark">\?</string>
     <string name="question_one_label">Question 1:</string>
     <string name="question_three_label">Question 3:</string>
     <string name="question_two_label">Question 2:</string>
@@ -1123,6 +1125,7 @@
     <string name="tw__tweet_media">Tweet Media</string>
     <string name="twitter_consumer_key" translatable="false">CHANGE-ME</string>
     <string name="twitter_consumer_secret" translatable="false">CHANGE-ME</string>
+    <string name="unfollow_conf_dialogue">Are you sure you want to unfollow </string>
     <string name="unfollow_label">Unfollow</string>
     <string name="unfollowed_notification_text">Unfollowed </string>
     <string name="users_you_follow_option">Users you follow</string>
@@ -1137,6 +1140,7 @@
         You\'ve already used <ns1:g example="jane.doe@example.com" id="email_addr">%1$s</ns1:g>
         to sign in. Enter your password for that account.
     </string>
+    <string name="yes">Yes</string>
     <string name="your_answer_hint">Your answer</string>
     <string name="your_results_title">Your Results</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>

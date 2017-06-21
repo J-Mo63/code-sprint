@@ -18,6 +18,8 @@ import com.sudo_code.codesprint.adapter.UserFollowHolder;
 import com.sudo_code.codesprint.model.User;
 
 import static com.sudo_code.codesprint.activity.LoginActivity.USER_ID;
+import static com.sudo_code.codesprint.task.DatabaseController.USER_DB_REF;
+import static com.sudo_code.codesprint.task.DatabaseController.USER_FOLLOW_DB_REF;
 
 /**
  * A screen that displays all users being followed by the currently logged in user
@@ -29,7 +31,8 @@ public class FollowingActivity extends AppCompatActivity {
     private FirebaseRecyclerAdapter mAdapter;
 
     /**
-     * Sets up the toolbar, defines the recycler, gets objects and populates it.
+     * Sets up the toolbar, defines the recycler, gets objects and populates it
+     * with a Firebase UI adapter.
      *
      * @param savedInstanceState - the saved bundle state
      */
@@ -43,11 +46,12 @@ public class FollowingActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         RecyclerView recycler = (RecyclerView) findViewById(R.id.following_recycler);
 
+        // Set up indexed recycler adapter for Firebase
         DatabaseReference db = FirebaseDatabase.getInstance().getReference();
         mAdapter = new FirebaseIndexRecyclerAdapter<User, UserFollowHolder>(
                 User.class, R.layout.user_item, UserFollowHolder.class,
-                db.child("User").child(getCurrentUserId()).child("userFollows"),
-                db.child("User")) {
+                db.child(USER_DB_REF).child(getCurrentUserId()).child(USER_FOLLOW_DB_REF),
+                db.child(USER_DB_REF)) {
             @Override
             public void populateViewHolder(UserFollowHolder holder, User user, int position) {
                 holder.setUsername(user.getUsername());
@@ -61,11 +65,6 @@ public class FollowingActivity extends AppCompatActivity {
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,
                 LinearLayoutManager.VERTICAL);
         recycler.addItemDecoration(dividerItemDecoration);
-    }
-
-    private String getCurrentUserId() {
-        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        return sharedPrefs.getString(USER_ID, null);
     }
 
     /**
@@ -83,9 +82,24 @@ public class FollowingActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Cleans up the recycler adapter and shuts down the connection to the database
+     * after the activity is destroyed.
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();
         mAdapter.cleanup();
+    }
+
+    /**
+     * A helper method to return the id of the current user from Shared Prferences
+     * just incase the session is dropped.
+     *
+     * @return String - the current user user id
+     */
+    private String getCurrentUserId() {
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        return sharedPrefs.getString(USER_ID, null);
     }
 }

@@ -60,6 +60,10 @@
     <string name="following_title">Users you follow</string>
     <string name="unfollow_label">Unfollow</string>
     <string name="unfollowed_notification_text">Unfollowed&#160;</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="question_mark">\?</string>
+    <string name="unfollow_conf_dialogue">Are you sure you want to unfollow&#160;</string>
 
     <!-- FOLLOW USER -->
     <string name="follow_user_title">Follow a User</string>
@@ -79,6 +83,6 @@
     <string name="no_user_found_error">No user by that name found</string>
     <string name="followed_text">Following&#160;</string>
     <string name="already_following_error">You already follow&#160;</string>
-    <string name="following_yourself_meme">You now follow yourself… good work?</string>
+    <string name="following_yourself_meme">You can\'t follow yourself…</string>
     <string name="error_occurred_super_general">An error occurred</string>
 </resources>

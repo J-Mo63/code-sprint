@@ -14,13 +14,16 @@ import com.google.firebase.database.ValueEventListener;
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.model.User;
 
+/**
+ *
+ */
 public class DatabaseController {
 
     // Object fields
     private Activity mActivity;
 
     // Authentication fields
-    private FirebaseUser currentUser;
+    private FirebaseUser mCurrentUser;
 
     // Firebase fields
     private Firebase mFirebaseUser;
@@ -30,12 +33,17 @@ public class DatabaseController {
 
     // Constants
     private static final String DB_LINK_ADDRESS = "https://codesprint-e5f09.firebaseio.com/";
-    private static final String USER_DB_REF = "User";
-    private static final String USER_FOLLOW_DB_REF = "userFollows";
+    public static final String USER_DB_REF = "User";
+    public static final String USER_FOLLOW_DB_REF = "userFollows";
     private static final String USERNAME_FIELD_NAME = "username";
     private static final String USER_ID_FIELD_NAME = "id";
 
-
+    /**
+     * A constructor for the DatabaseController that sets up authentication,
+     * defines Firebase paths and defines references.
+     *
+     * @param activity - the calling activity
+     */
     public DatabaseController(Activity activity){
         mActivity = activity;
 
@@ -44,7 +52,7 @@ public class DatabaseController {
         FirebaseAuth.AuthStateListener mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                currentUser = firebaseAuth.getCurrentUser();
+                mCurrentUser = firebaseAuth.getCurrentUser();
             }
         };
 
@@ -53,7 +61,6 @@ public class DatabaseController {
 
         // Define database paths
         mFirebaseUser = new Firebase(DB_LINK_ADDRESS + USER_DB_REF);
-
         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
         mDatabaseUsers = database.child(USER_DB_REF);
 
@@ -61,6 +68,12 @@ public class DatabaseController {
         mAuth.addAuthStateListener(mAuthListener);
     }
 
+    /**
+     * Checks to see if a user exists in the database, and calls another method
+     * to follow them in the case that they do.
+     *
+     * @param username - the input username
+     */
     public void createUserFollow(final String username) {
         mDatabaseUsers.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -86,18 +99,35 @@ public class DatabaseController {
         });
     }
 
-
+    /**
+     * Unfollows a user based on thier userid.
+     *
+     * @param uId - the userid of the user to be unfollowed
+     */
     public void deleteUserFollow(final String uId) {
-        final String currentUid = currentUser.getUid();
+        final String currentUid = mCurrentUser.getUid();
         mFirebaseUser.child(currentUid).child(USER_FOLLOW_DB_REF).child(uId).removeValue();
     }
 
+    /**
+     * Creates a database entry for a user.
+     *
+     * @param id - the id of the user to be created
+     * @param username - the username of the user to be created
+     */
     public void createUser(String id, String username) {
         mFirebaseUser.child(id).setValue(new User(id, username));
     }
 
+    /**
+     * A helper method to check if one already follows a user. If they do not already
+     * follow the, creates a userFollow under the user entry in the database.
+     *
+     * @param uId - the id of the user to follow
+     * @param username - the username of the user to follow
+     */
     private void addUserFollow(final String uId, final String username) {
-        final String currentUid = currentUser.getUid();
+        final String currentUid = mCurrentUser.getUid();
         final Firebase newEntry = mFirebaseUser.child(currentUid).child(USER_FOLLOW_DB_REF);
 
         DatabaseReference databaseUserFollows = mDatabaseUsers.child(currentUid).child(USER_FOLLOW_DB_REF);
@@ -115,12 +145,12 @@ public class DatabaseController {
                     }
                 }
                 if (!found) {
-                    newEntry.child(uId).setValue(true);
                     String msgText;
                     if (currentUid.equals(uId)) {
                         msgText = mActivity.getString(R.string.following_yourself_meme);
                     }
                     else {
+                        newEntry.child(uId).setValue(true);
                         msgText = mActivity.getString(R.string.followed_text) + username;
                     }
                     Toast.makeText(mActivity, msgText, Toast.LENGTH_LONG).show();
