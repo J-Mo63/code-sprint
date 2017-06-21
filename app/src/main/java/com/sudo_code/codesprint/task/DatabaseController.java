@@ -86,6 +86,12 @@ public class DatabaseController {
         });
     }
 
+
+    public void deleteUserFollow(final String uId) {
+        final String currentUid = currentUser.getUid();
+        mFirebaseUser.child(currentUid).child(USER_FOLLOW_DB_REF).child(uId).removeValue();
+    }
+
     public void createUser(String id, String username) {
         mFirebaseUser.child(id).setValue(new User(id, username));
     }
@@ -94,9 +100,9 @@ public class DatabaseController {
         final String currentUid = currentUser.getUid();
         final Firebase newEntry = mFirebaseUser.child(currentUid).child(USER_FOLLOW_DB_REF);
 
-        DatabaseReference mDatabaseUserFollows = mDatabaseUsers.child(currentUid).child(USER_FOLLOW_DB_REF);
+        DatabaseReference databaseUserFollows = mDatabaseUsers.child(currentUid).child(USER_FOLLOW_DB_REF);
 
-        mDatabaseUserFollows.addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseUserFollows.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 boolean found = false;
