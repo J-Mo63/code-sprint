@@ -51,7 +51,7 @@ public class FollowingActivity extends AppCompatActivity {
             @Override
             public void populateViewHolder(UserFollowHolder holder, User user, int position) {
                 holder.setUsername(user.getUsername());
-                holder.setDelete(user.getId());
+                holder.setDelete(user.getId(), user.getUsername());
             }
         };
 

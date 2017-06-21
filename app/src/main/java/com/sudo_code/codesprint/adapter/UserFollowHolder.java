@@ -1,8 +1,10 @@
 package com.sudo_code.codesprint.adapter;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
@@ -20,6 +22,8 @@ public class UserFollowHolder extends RecyclerView.ViewHolder {
     private ImageView mUnfollowImg;
 
     private DatabaseController mDatabaseController;
+
+    private String mUserId;
 
     /**
      * a constructor that has an onclick listener
@@ -41,12 +45,29 @@ public class UserFollowHolder extends RecyclerView.ViewHolder {
         mUsernameTextView.setText(username);
     }
 
-    public void setDelete(final String uId) {
+    public void setDelete(final String uId, final String username) {
+        mUserId = uId;
         mUnfollowImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mDatabaseController.deleteUserFollow(uId);
+                AlertDialog.Builder builder = new AlertDialog.Builder(itemView.getContext());
+                builder.setMessage("Are you sure you want to unfollow " + username + "?")
+                        .setPositiveButton("Yes", dialogClickListener)
+                        .setNegativeButton("No", dialogClickListener).show();
             }
         });
     }
+
+    DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            switch (which){
+                case DialogInterface.BUTTON_POSITIVE:
+                    mDatabaseController.deleteUserFollow(mUserId);
+                    break;
+                case DialogInterface.BUTTON_NEGATIVE:
+                    break;
+            }
+        }
+    };
 }
