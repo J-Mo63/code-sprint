@@ -34,7 +34,7 @@
     <string name="title_activity_view_user_challenge">ViewUserChallengeActivity</string>
     <string name="are_you_ready_to_begin_title">Are you ready to begin?</string>
     <string name="begin_button_text">Let\'s begin!</string>
-    <string name="challenge_instructions_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</string>
+    <string name="challenge_instructions_text">You will be asked a number of coding questions that you should answer as quickly as possible.\nThe questions asked may be in any programming language or even pseudocode, however they do not require in-depth knowledge of the languages.\n\nOnce the challenges finish downloading, you may click the \"I\'m Ready\" button to proceed to the questions.</string>
     <string name="downloading_challenges_notification">Downloading today\'s challenges</string>
     <string name="finished_downloading_notification">Challenges finished downloading</string>
 

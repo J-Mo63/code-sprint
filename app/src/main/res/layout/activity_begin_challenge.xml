@@ -21,6 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:textAlignment="center"
+        android:padding="10dp"
+        android:textSize="15sp"
         android:text="@string/challenge_instructions_text" />
 
     <Button

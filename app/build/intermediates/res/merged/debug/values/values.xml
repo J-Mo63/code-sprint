@@ -950,7 +950,7 @@
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="button_text_save">Save</string>
     <string name="button_text_send">Send</string>
-    <string name="challenge_instructions_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</string>
+    <string name="challenge_instructions_text">You will be asked a number of coding questions that you should answer as quickly as possible.\nThe questions asked may be in any programming language or even pseudocode, however they do not require in-depth knowledge of the languages.\n\nOnce the challenges finish downloading, you may click the \"I\'m Ready\" button to proceed to the questions.</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b> and enter your code.</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
