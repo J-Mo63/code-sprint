@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.os.SystemClock;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.EditText;
@@ -66,6 +68,18 @@ public class ChallengeActivity extends Activity {
             @Override
             public void onClick(View view) {
                 submitAnswer();
+            }
+        });
+
+        // On submitting answer form through 'enter' key
+        mAnswerField.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
+                if (id == EditorInfo.IME_ACTION_DONE) {
+                    submitAnswer();
+                    return true;
+                }
+                return false;
             }
         });
 

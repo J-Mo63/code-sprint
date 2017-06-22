@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.model.Result;
 import com.sudo_code.codesprint.model.UserChallenge;
-import com.sudo_code.codesprint.task.DatabaseController;
+import com.sudo_code.codesprint.helper.DatabaseController;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -58,7 +58,7 @@ public class ResultsActivity extends AppCompatActivity {
         questionThreeResult.setText(formatTime(mResults.get(2).getTime()));
 
         resultTotal.setText(formatTime(getTotal()));
-        gradeText.setText(calculateGrade());
+        gradeText.setText(calculateGrade(getTotal()));
 
         final Intent homeIntent = new Intent(this, HomeActivity.class);
 
@@ -83,7 +83,7 @@ public class ResultsActivity extends AppCompatActivity {
         // Post challenge to db
         databaseController.addUserChallenge(sharedPrefs.getString(USER_ID, null),
                 new UserChallenge(sharedPrefs.getString(USERNAME, null),
-                        dateString, getGrade(), getTotal()));
+                        dateString, calculateGrade(getTotal()), getTotal()));
     }
 
     /**
@@ -102,8 +102,32 @@ public class ResultsActivity extends AppCompatActivity {
      *
      * @return String - the grade value
      */
-    private String calculateGrade() {
-        return "B";
+    private String calculateGrade(long time) {
+        String grade;
+
+        if (time <= 4000) {
+            grade = "S";
+        }
+        else if (time <= 8000) {
+            grade = "A";
+        }
+        else if (time <= 16000) {
+            grade = "B";
+        }
+        else if (time <= 24000) {
+            grade = "C";
+        }
+        else if (time <= 35000) {
+            grade = "D";
+        }
+        else if (time <= 48000) {
+            grade = "E";
+        }
+        else {
+            grade = "F";
+        }
+
+        return grade;
     }
 
     /**
@@ -117,15 +141,6 @@ public class ResultsActivity extends AppCompatActivity {
             total += result.getTime();
         }
         return total;
-    }
-
-    /**
-     * Calculates and returns the user's grade
-     *
-     * @return String - grade of the user
-     */
-    private String getGrade() {
-        return "A";
     }
 
 }

@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sudo_code.codesprint.R;
-import com.sudo_code.codesprint.task.DatabaseController;
+import com.sudo_code.codesprint.helper.DatabaseController;
 
 /**
  * A class for a viewholder used by the FirebaseRecyclerAdapter.

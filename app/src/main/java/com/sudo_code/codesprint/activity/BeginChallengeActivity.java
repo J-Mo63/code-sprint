@@ -20,7 +20,7 @@ import com.sudo_code.codesprint.model.Challenge;
 
 import java.util.ArrayList;
 
-import static com.sudo_code.codesprint.task.DatabaseController.CHALLENGE_DB_REF;
+import static com.sudo_code.codesprint.helper.DatabaseController.CHALLENGE_DB_REF;
 
 /**
  * A screen that downloads the current challenge and checks if the user is ready to begin.

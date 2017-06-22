@@ -34,10 +34,10 @@ import com.google.firebase.database.ValueEventListener;
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.holder.ChallengeHolder;
 import com.sudo_code.codesprint.model.UserChallenge;
-import com.sudo_code.codesprint.task.DatabaseController;
+import com.sudo_code.codesprint.helper.DatabaseController;
 import static com.sudo_code.codesprint.activity.LoginActivity.USER_ID;
-import static com.sudo_code.codesprint.task.DatabaseController.USER_CHALLENGE_FIELD_NAME;
-import static com.sudo_code.codesprint.task.DatabaseController.USER_DB_REF;
+import static com.sudo_code.codesprint.helper.DatabaseController.USER_CHALLENGE_FIELD_NAME;
+import static com.sudo_code.codesprint.helper.DatabaseController.USER_DB_REF;
 
 /**
  * A home screen that displays past challenges and allows the user to begin
@@ -85,6 +85,9 @@ public class HomeActivity extends AppCompatActivity {
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,
                 LinearLayoutManager.VERTICAL);
         recycler.addItemDecoration(dividerItemDecoration);
+        LinearLayoutManager manager = (LinearLayoutManager) recycler.getLayoutManager();
+        manager.setReverseLayout(true);
+        manager.setStackFromEnd(true);
 
         // Intent definitions
         final Intent beginChallengeIntent = new Intent(this, BeginChallengeActivity.class);

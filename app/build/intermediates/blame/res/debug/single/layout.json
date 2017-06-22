@@ -100,20 +100,20 @@
         "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
     },
     {
-        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
-        "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/layout/abc_alert_dialog_button_bar_material.xml"
-    },
-    {
-        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/user_challenge_item.xml",
-        "source": "/Users/J-Mo/Projects/CodeSprint/app/src/main/res/layout/user_challenge_item.xml"
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/tw__player_activity.xml",
+        "source": "/Users/J-Mo/.android/build-cache/79222305197bea295d39d96dafb0350552878bd9/output/res/layout/tw__player_activity.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_small.xml",
         "source": "/Users/J-Mo/.android/build-cache/d1f87e391d7feb9b3f58313d1ab4065443b7edd0/output/res/layout/messenger_button_send_blue_small.xml"
     },
     {
-        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/tw__player_activity.xml",
-        "source": "/Users/J-Mo/.android/build-cache/79222305197bea295d39d96dafb0350552878bd9/output/res/layout/tw__player_activity.xml"
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/user_challenge_item.xml",
+        "source": "/Users/J-Mo/Projects/CodeSprint/app/src/main/res/layout/user_challenge_item.xml"
+    },
+    {
+        "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/J-Mo/.android/build-cache/1fbfcf4c4df7da19b3384d32f9b500c02f3bb955/output/res/layout/abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/res/merged/debug/layout/idp_button_twitter.xml",

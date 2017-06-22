@@ -1,4 +1,4 @@
-package com.sudo_code.codesprint.task;
+package com.sudo_code.codesprint.helper;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;

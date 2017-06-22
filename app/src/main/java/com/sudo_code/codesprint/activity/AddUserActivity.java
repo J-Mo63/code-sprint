@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.sudo_code.codesprint.R;
-import com.sudo_code.codesprint.task.DatabaseController;
+import com.sudo_code.codesprint.helper.DatabaseController;
 
 /**
  * A signup screen that allows the user to signup with a username, email and password.

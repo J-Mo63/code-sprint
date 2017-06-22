@@ -34,9 +34,9 @@ import static com.sudo_code.codesprint.activity.LoginActivity.USER_ID;
 import static com.sudo_code.codesprint.holder.ChallengeHolder.USER_CHALLNGE_DATE;
 import static com.sudo_code.codesprint.holder.ChallengeHolder.USER_CHALLNGE_GRADE;
 import static com.sudo_code.codesprint.holder.ChallengeHolder.USER_CHALLNGE_TIME;
-import static com.sudo_code.codesprint.task.DatabaseController.USER_CHALLENGE_DB_REF;
-import static com.sudo_code.codesprint.task.DatabaseController.USER_DB_REF;
-import static com.sudo_code.codesprint.task.DatabaseController.USER_FOLLOW_FIELD_NAME;
+import static com.sudo_code.codesprint.helper.DatabaseController.USER_CHALLENGE_DB_REF;
+import static com.sudo_code.codesprint.helper.DatabaseController.USER_DB_REF;
+import static com.sudo_code.codesprint.helper.DatabaseController.USER_FOLLOW_FIELD_NAME;
 
 /**
  * A screen that displays the results of a past challenge completed by

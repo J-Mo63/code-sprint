@@ -26,8 +26,8 @@ import com.sudo_code.codesprint.holder.UserFollowHolder;
 import com.sudo_code.codesprint.model.User;
 
 import static com.sudo_code.codesprint.activity.LoginActivity.USER_ID;
-import static com.sudo_code.codesprint.task.DatabaseController.USER_DB_REF;
-import static com.sudo_code.codesprint.task.DatabaseController.USER_FOLLOW_FIELD_NAME;
+import static com.sudo_code.codesprint.helper.DatabaseController.USER_DB_REF;
+import static com.sudo_code.codesprint.helper.DatabaseController.USER_FOLLOW_FIELD_NAME;
 
 /**
  * A screen that displays all users being followed by the currently logged in user
