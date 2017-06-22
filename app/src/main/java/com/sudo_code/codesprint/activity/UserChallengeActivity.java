@@ -9,12 +9,18 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseIndexRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.holder.UserChallengeHolder;
 import com.sudo_code.codesprint.model.UserChallenge;
@@ -62,6 +68,10 @@ public class UserChallengeActivity extends AppCompatActivity {
         TextView mTimeText = (TextView) findViewById(R.id.activity_user_time);
         TextView mGradeText = (TextView) findViewById(R.id.activity_user_grade);
 
+        final LinearLayout progressLayout = (LinearLayout) findViewById(R.id.user_challenge_progress_layout);
+        final ProgressBar progressBar = (ProgressBar) findViewById(R.id.user_challenge_progress_bar);
+        final TextView progressText = (TextView) findViewById(R.id.user_challenge_progress_text);
+
         String time = formatTime(extras.getLong(USER_CHALLNGE_TIME));
         mTimeText.setText(time);
         mGradeText.setText(getIntent().getStringExtra(USER_CHALLNGE_GRADE));
@@ -69,18 +79,37 @@ public class UserChallengeActivity extends AppCompatActivity {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         String uId = sharedPrefs.getString(USER_ID, null);
 
-        // Set up indexed recycler adapter for Firebase
+        // Set up db refs
         DatabaseReference db = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference userFollowDb = db.child(USER_DB_REF).child(uId)
+                .child(USER_FOLLOW_FIELD_NAME);
+        DatabaseReference userChallengeDb = db.child(USER_CHALLENGE_DB_REF)
+                .child(getIntent().getStringExtra(USER_CHALLNGE_DATE));
+
+        // Set up indexed recycler adapter for Firebase
         mAdapter = new FirebaseIndexRecyclerAdapter<UserChallenge, UserChallengeHolder>(
                 UserChallenge.class, R.layout.user_challenge_item, UserChallengeHolder.class,
-                db.child(USER_DB_REF).child(uId).child(USER_FOLLOW_FIELD_NAME),
-                db.child(USER_CHALLENGE_DB_REF)
-                        .child(getIntent().getStringExtra(USER_CHALLNGE_DATE))) {
+                userFollowDb, userChallengeDb) {
             @Override
             public void populateViewHolder(UserChallengeHolder holder, UserChallenge userChallenge, int position) {
                 holder.setComponents(userChallenge);
             }
         };
+
+        // Check to see if data was loaded and make changes
+        db.child(USER_CHALLENGE_DB_REF).child(getIntent().getStringExtra(USER_CHALLNGE_DATE))
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                progressLayout.setVisibility(View.INVISIBLE);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                progressBar.setVisibility(View.INVISIBLE);
+                progressText.setText(R.string.load_data_error);
+            }
+        });
 
         mRecycler.setAdapter(mAdapter);
         mRecycler.setLayoutManager(new LinearLayoutManager(this));

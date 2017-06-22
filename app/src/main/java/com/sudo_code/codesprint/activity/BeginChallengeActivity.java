@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -45,6 +46,8 @@ public class BeginChallengeActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        final LinearLayout progressLayout = (LinearLayout) findViewById(R.id.begin_challenge_progress_layout);
+
         // Set up database refernces
         DatabaseReference mDatabaseChallenge = FirebaseDatabase.getInstance().getReference()
                 .child(CHALLENGE_DB_REF);
@@ -77,6 +80,7 @@ public class BeginChallengeActivity extends AppCompatActivity {
                 });
 
                 // Tell the user it has been downloaded and that they may proceed
+                progressLayout.setVisibility(View.INVISIBLE);
                 beginButton.setVisibility(View.VISIBLE);
             }
 

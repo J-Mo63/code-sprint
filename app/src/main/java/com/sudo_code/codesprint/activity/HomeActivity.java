@@ -68,9 +68,11 @@ public class HomeActivity extends AppCompatActivity {
 
         // Set up indexed recycler adapter for Firebase
         DatabaseReference db = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference userChallengeDb = db.child(USER_DB_REF).child(getCurrentUserId())
+                .child(USER_CHALLENGE_FIELD_NAME);
         mAdapter = new FirebaseRecyclerAdapter<UserChallenge, ChallengeHolder>(
                 UserChallenge.class, R.layout.challenge_item, ChallengeHolder.class,
-                db.child(USER_DB_REF).child(getCurrentUserId()).child(USER_CHALLENGE_FIELD_NAME)) {
+                userChallengeDb) {
             @Override
             public void populateViewHolder(ChallengeHolder holder, UserChallenge userChallenge, int position) {
                 holder.setComponents(userChallenge);
@@ -96,9 +98,8 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        // Check to see if data was loaded
-        db.child(USER_DB_REF).child(getCurrentUserId()).child(USER_CHALLENGE_FIELD_NAME)
-                .addListenerForSingleValueEvent(new ValueEventListener() {
+        // Check to see if data was loaded and make changes
+        userChallengeDb.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 progressLayout.setVisibility(View.INVISIBLE);
