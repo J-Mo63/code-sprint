@@ -15,15 +15,11 @@ import com.firebase.ui.database.FirebaseIndexRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.sudo_code.codesprint.R;
-import com.sudo_code.codesprint.adapter.UserChallengeAdapter;
 import com.sudo_code.codesprint.adapter.UserChallengeHolder;
-import com.sudo_code.codesprint.adapter.UserFollowHolder;
-import com.sudo_code.codesprint.model.User;
 import com.sudo_code.codesprint.model.UserChallenge;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
