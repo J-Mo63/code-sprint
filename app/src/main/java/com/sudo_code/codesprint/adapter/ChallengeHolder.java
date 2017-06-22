@@ -13,10 +13,13 @@ import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.activity.UserChallengeActivity;
 import com.sudo_code.codesprint.model.UserChallenge;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 
 /**
- * A class for viewholder... for the adapter.
+ * A class for the ChallengeHolder used by the Firebase UI
  */
 public class ChallengeHolder extends RecyclerView.ViewHolder {
 
@@ -27,7 +30,7 @@ public class ChallengeHolder extends RecyclerView.ViewHolder {
     private LinearLayout itemLayout;
 
     /**
-     * a constructor that has an onclick listener
+     * A constructor that has an onclick listener
      *
      * @param itemView - The current ViewHolder
      */
@@ -43,15 +46,33 @@ public class ChallengeHolder extends RecyclerView.ViewHolder {
         itemLayout = (LinearLayout) itemView.findViewById(R.id.challenge_item_layout);
     }
 
-
+    /**
+     * Sets up the holder with the userChallenge elements it must model.
+     *
+     * @param userChallenge - the given userChallenge
+     */
     public void setComponents(UserChallenge userChallenge) {
-        dayTextView.setText("Monday");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd", Locale.ENGLISH);
+        String dateString;
+        try {
+            Date date = formatter.parse(userChallenge.getDate());
+            formatter.applyPattern("EEEE d MMM yyyy");
+            dateString = formatter.format(date);
+        }
+        catch (ParseException e) {
+            dateString = userChallenge.getDate();
+        }
+
+        dayTextView.setText(dateString);
         gradeTextView.setText(userChallenge.getGrade());
         timeTextView.setText(formatTime(userChallenge.getTime()));
         itemLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent beginChallengeIntent = new Intent(view.getContext(), UserChallengeActivity.class);
+
+                
+
                 view.getContext().getApplicationContext().startActivity(beginChallengeIntent);
             }
         });

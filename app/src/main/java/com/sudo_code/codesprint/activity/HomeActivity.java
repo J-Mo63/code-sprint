@@ -21,25 +21,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import com.firebase.ui.database.FirebaseIndexRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.adapter.ChallengeHolder;
-import com.sudo_code.codesprint.adapter.UserFollowHolder;
-import com.sudo_code.codesprint.model.Challenge;
-import com.sudo_code.codesprint.model.User;
 import com.sudo_code.codesprint.model.UserChallenge;
 import com.sudo_code.codesprint.task.DatabaseController;
-
-import java.util.ArrayList;
-
 import static com.sudo_code.codesprint.activity.LoginActivity.USER_ID;
 import static com.sudo_code.codesprint.task.DatabaseController.USER_CHALLENGE_FIELD_NAME;
 import static com.sudo_code.codesprint.task.DatabaseController.USER_DB_REF;
-import static com.sudo_code.codesprint.task.DatabaseController.USER_FOLLOW_FIELD_NAME;
 
 /**
  * A home screen that displays past challenges and allows the user to begin
@@ -48,9 +39,7 @@ import static com.sudo_code.codesprint.task.DatabaseController.USER_FOLLOW_FIELD
 public class HomeActivity extends AppCompatActivity {
 
     // Object fields
-    private ArrayList<UserChallenge> mUserChallenges;
     private DatabaseController mDbController;
-    private FirebaseRecyclerAdapter mAdapter;
 
     /**
      * Sets up the toolbar, defines the recycler, gets objects and populates it.
@@ -68,7 +57,7 @@ public class HomeActivity extends AppCompatActivity {
 
         // Set up indexed recycler adapter for Firebase
         DatabaseReference db = FirebaseDatabase.getInstance().getReference();
-        mAdapter = new FirebaseRecyclerAdapter<UserChallenge, ChallengeHolder>(
+        FirebaseRecyclerAdapter mAdapter = new FirebaseRecyclerAdapter<UserChallenge, ChallengeHolder>(
                 UserChallenge.class, R.layout.challenge_item, ChallengeHolder.class,
                 db.child(USER_DB_REF).child(getCurrentUserId()).child(USER_CHALLENGE_FIELD_NAME)) {
             @Override
@@ -77,7 +66,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         };
 
-
+        // Adapter setup
         recycler.setAdapter(mAdapter);
         recycler.setLayoutManager(new LinearLayoutManager(this));
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this,
@@ -144,17 +133,6 @@ public class HomeActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-
-    /**
-     * Populates the challenges field with UserChallenge objects.
-     */
-    private void getChallenges() {
-//        mUserChallenges.add(new UserChallenge("j-mo", new Date(), "A", 31.45));
-//        mUserChallenges.add(new UserChallenge("j-mo", new Date(), "C", 44.15));
-//        mUserChallenges.add(new UserChallenge("j-mo", new Date(), "B", 25.23));
-//        mUserChallenges.add(new UserChallenge("j-mo", new Date(), "D", 89.01));
     }
 
 

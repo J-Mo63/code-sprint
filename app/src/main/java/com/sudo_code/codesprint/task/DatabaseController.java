@@ -12,13 +12,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.sudo_code.codesprint.R;
-import com.sudo_code.codesprint.model.Challenge;
 import com.sudo_code.codesprint.model.User;
 import com.sudo_code.codesprint.model.UserChallenge;
-
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Locale;
 
 /**
  *
@@ -178,13 +173,23 @@ public class DatabaseController {
         });
     }
 
-
-
+    /**
+     * Creates two database entries for each completed userChallenge (one to be
+     * used by the user and one for public record). If the userChallenge already
+     * exists, it updates the information.
+     *
+     * @param uId - the current user's id
+     * @param userChallenge - the completed userChallenge to post
+     */
     public void addUserChallenge(String uId, UserChallenge userChallenge) {
+        // Reformat date for posting to user profile
+        String dateString = userChallenge.getDate().replaceAll("/", "-");
 
-        Firebase userRef = mFirebaseUser.child(uId).child(USER_CHALLENGE_FIELD_NAME).push();
-        userRef.setValue(userChallenge);
+        // Post to user profile
+        mFirebaseUser.child(uId).child(USER_CHALLENGE_FIELD_NAME).child(dateString)
+                .setValue(userChallenge);
 
+        // Post to public
         mFirebaseUserChallenge.child(userChallenge.getDate()).child(uId).setValue(userChallenge);
     }
 }

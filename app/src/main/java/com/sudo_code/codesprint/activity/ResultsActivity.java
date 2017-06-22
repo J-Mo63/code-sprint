@@ -71,14 +71,16 @@ public class ResultsActivity extends AppCompatActivity {
         });
 
         DatabaseController databaseController = new DatabaseController(this);
-
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 
+        // Get today's date
         Date today = new Date();
 
+        // Format date to string
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd", Locale.ENGLISH);
         String dateString = formatter.format(today);
 
+        // Post challenge to db
         databaseController.addUserChallenge(sharedPrefs.getString(USER_ID, null),
                 new UserChallenge(sharedPrefs.getString(USERNAME, null),
                         dateString, getGrade(), getTotal()));
@@ -117,6 +119,11 @@ public class ResultsActivity extends AppCompatActivity {
         return total;
     }
 
+    /**
+     * Calculates and returns the user's grade
+     *
+     * @return String - grade of the user
+     */
     private String getGrade() {
         return "A";
     }
