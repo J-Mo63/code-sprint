@@ -6,25 +6,25 @@
     density="420dpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1498100697305"
+    timestamp="1498101524310"
     token="6360534454215336164"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="174" />
+        duration="196" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="13" />
+        duration="9" />
     <task
         name="verifier"
         duration="0" />
 
     <artifact
-        location="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+        location="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
 
     <build
@@ -78,14 +78,6 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1498099773087"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
         timestamp="1498100117710"
         verifier="FIELD_ADDED" >
         <artifact
@@ -94,10 +86,18 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1498100697305"
+        timestamp="1498101437550"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1498101524310"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/J-Mo/Projects/CodeSprint/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
     </build>
 

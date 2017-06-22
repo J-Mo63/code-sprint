@@ -37,7 +37,7 @@ public class DatabaseController {
     // Constants
     private static final String DB_LINK_ADDRESS = "https://codesprint-e5f09.firebaseio.com/";
     public static final String USER_DB_REF = "User";
-    private static final String USER_CHALLENGE_DB_REF = "UserChallege";
+    public static final String USER_CHALLENGE_DB_REF = "UserChallege";
     public static final String CHALLENGE_DB_REF = "Challenge";
     public static final String USER_FOLLOW_FIELD_NAME = "userFollows";
     public static final String USER_CHALLENGE_FIELD_NAME = "userChallenges";
