@@ -44,6 +44,7 @@
     <string name="submit_button_text">Submit</string>
     <string name="answer_incorrect_notification">Answer incorrect, try again</string>
     <string name="answer_correct_notification">Correct!</string>
+    <string name="question_count">Question&#160;</string>
 
     <!-- RESULTS -->
     <string name="title_activity_results">ResultsActivity</string>

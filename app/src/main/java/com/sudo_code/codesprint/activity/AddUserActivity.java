@@ -19,6 +19,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.task.DatabaseController;
 
@@ -41,6 +43,7 @@ public class AddUserActivity extends AppCompatActivity {
     // Authentication objects
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
+    private FirebaseUser mCurrentUser;
 
     /**
      * Defines signup form fields and sets up triggers
@@ -78,6 +81,7 @@ public class AddUserActivity extends AppCompatActivity {
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                mCurrentUser = firebaseAuth.getCurrentUser();
             }
         };
 
@@ -131,6 +135,11 @@ public class AddUserActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+                                // Add user displayname
+                                UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                        .setDisplayName(username).build();
+                                mCurrentUser.updateProfile(profileUpdates);
+
                                 // Add the user to the database
                                 mDbController.createUser(mAuth.getCurrentUser().getUid(), username);
 

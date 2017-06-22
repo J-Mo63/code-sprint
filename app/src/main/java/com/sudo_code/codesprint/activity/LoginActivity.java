@@ -32,7 +32,8 @@ import com.sudo_code.codesprint.R;
 public class LoginActivity extends AppCompatActivity {
 
     // Constants
-    private static final String USERNAME = "username_tag";
+    private static final String EMAIL = "email_tag";
+    public static final String USERNAME = "username_tag";
     private static final String PASSWORD = "password_tag";
     public static final String USER_ID = "user_id_tag";
 
@@ -151,7 +152,7 @@ public class LoginActivity extends AppCompatActivity {
     private void attemptAutoLogin() {
 
         // Fetch previously stored details
-        String username = mSharedPrefs.getString(USERNAME, null);
+        String username = mSharedPrefs.getString(EMAIL, null);
         String password = mSharedPrefs.getString(PASSWORD, null);
 
         // If they exist, attempt a login
@@ -167,23 +168,24 @@ public class LoginActivity extends AppCompatActivity {
      * If there are form errors (missing fields, etc.), the
      * errors are presented and no actual login attempt is made.
      */
-    private void attemptLogin(final String username, final String password) {
+    private void attemptLogin(final String email, final String password) {
 
-        if (formHasErrors(username, password)) {
-            focusErrors(username, password);
+        if (formHasErrors(email, password)) {
+            focusErrors(email, password);
             showForm(true);
         }
         else {
             // Kick off a background task to perform the user login attempt
-            mAuth.signInWithEmailAndPassword(username, password).addOnCompleteListener(this,
+            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this,
                     new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 // Save login details
-                                mSharedPrefs.edit().putString(USERNAME, username).apply();
+                                mSharedPrefs.edit().putString(EMAIL, email).apply();
                                 mSharedPrefs.edit().putString(PASSWORD, password).apply();
                                 mSharedPrefs.edit().putString(USER_ID, currentUser.getUid()).apply();
+                                mSharedPrefs.edit().putString(USERNAME, currentUser.getDisplayName()).apply();
 
                                 // Open to the home activity
                                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);

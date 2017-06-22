@@ -71,12 +71,12 @@ public class UserChallengeActivity extends AppCompatActivity {
      * Populates the userChallenges field with UserChallenge objects.
      */
     private void getUserChallenges() {
-        mUserChallenges.add(new UserChallenge("dandolo", new Date(), "A", 31.45));
-        mUserChallenges.add(new UserChallenge("actom360", new Date(), "C", 44.15));
-        mUserChallenges.add(new UserChallenge("bb3b123", new Date(), "B", 25.23));
-        mUserChallenges.add(new UserChallenge("palzmadol", new Date(), "D", 89.01));
-        mUserChallenges.add(new UserChallenge("peanut", new Date(), "D", 89.01));
-        mUserChallenges.add(new UserChallenge("dudewhodoesstuff", new Date(), "D", 89.01));
+//        mUserChallenges.add(new UserChallenge("dandolo", new Date(), "A", 31.45));
+//        mUserChallenges.add(new UserChallenge("actom360", new Date(), "C", 44.15));
+//        mUserChallenges.add(new UserChallenge("bb3b123", new Date(), "B", 25.23));
+//        mUserChallenges.add(new UserChallenge("palzmadol", new Date(), "D", 89.01));
+//        mUserChallenges.add(new UserChallenge("peanut", new Date(), "D", 89.01));
+//        mUserChallenges.add(new UserChallenge("dudewhodoesstuff", new Date(), "D", 89.01));
     }
 
 }

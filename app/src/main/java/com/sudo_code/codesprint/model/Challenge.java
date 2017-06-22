@@ -15,6 +15,8 @@ public class Challenge implements Parcelable {
     private String question;
     private String answer;
 
+    public Challenge() {}
+
     /**
      * A constructor for a Challenge
      *

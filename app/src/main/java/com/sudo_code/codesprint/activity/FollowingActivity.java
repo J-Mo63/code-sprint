@@ -19,7 +19,7 @@ import com.sudo_code.codesprint.model.User;
 
 import static com.sudo_code.codesprint.activity.LoginActivity.USER_ID;
 import static com.sudo_code.codesprint.task.DatabaseController.USER_DB_REF;
-import static com.sudo_code.codesprint.task.DatabaseController.USER_FOLLOW_DB_REF;
+import static com.sudo_code.codesprint.task.DatabaseController.USER_FOLLOW_FIELD_NAME;
 
 /**
  * A screen that displays all users being followed by the currently logged in user
@@ -50,7 +50,7 @@ public class FollowingActivity extends AppCompatActivity {
         DatabaseReference db = FirebaseDatabase.getInstance().getReference();
         mAdapter = new FirebaseIndexRecyclerAdapter<User, UserFollowHolder>(
                 User.class, R.layout.user_item, UserFollowHolder.class,
-                db.child(USER_DB_REF).child(getCurrentUserId()).child(USER_FOLLOW_DB_REF),
+                db.child(USER_DB_REF).child(getCurrentUserId()).child(USER_FOLLOW_FIELD_NAME),
                 db.child(USER_DB_REF)) {
             @Override
             public void populateViewHolder(UserFollowHolder holder, User user, int position) {

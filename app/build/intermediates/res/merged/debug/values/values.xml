@@ -1017,7 +1017,7 @@
     <string name="follow_user_title">Follow a User</string>
     <string name="followed_text">Following </string>
     <string name="following_title">Users you follow</string>
-    <string name="following_yourself_meme">You now follow yourself… good work?</string>
+    <string name="following_yourself_meme">You can\'t follow yourself…</string>
     <string name="form_error">Please enter a </string>
     <string name="gcm_defaultSenderId" translatable="false">47975055047</string>
     <string name="general_error">An error has occurred.</string>
@@ -1055,6 +1055,7 @@
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="prompt_username">Username</string>
+    <string name="question_count">Question </string>
     <string name="question_mark">\?</string>
     <string name="question_one_label">Question 1:</string>
     <string name="question_three_label">Question 3:</string>

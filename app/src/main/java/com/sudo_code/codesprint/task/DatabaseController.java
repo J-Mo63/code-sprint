@@ -12,7 +12,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.sudo_code.codesprint.R;
+import com.sudo_code.codesprint.model.Challenge;
 import com.sudo_code.codesprint.model.User;
+import com.sudo_code.codesprint.model.UserChallenge;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Locale;
 
 /**
  *
@@ -27,6 +33,8 @@ public class DatabaseController {
 
     // Firebase fields
     private Firebase mFirebaseUser;
+    private Firebase mFirebaseUserChallenge;
+    private Firebase mFirebaseChallenge;
 
     // Database references
     private DatabaseReference mDatabaseUsers;
@@ -34,7 +42,10 @@ public class DatabaseController {
     // Constants
     private static final String DB_LINK_ADDRESS = "https://codesprint-e5f09.firebaseio.com/";
     public static final String USER_DB_REF = "User";
-    public static final String USER_FOLLOW_DB_REF = "userFollows";
+    private static final String USER_CHALLENGE_DB_REF = "UserChallege";
+    public static final String CHALLENGE_DB_REF = "Challenge";
+    public static final String USER_FOLLOW_FIELD_NAME = "userFollows";
+    public static final String USER_CHALLENGE_FIELD_NAME = "userChallenges";
     private static final String USERNAME_FIELD_NAME = "username";
     private static final String USER_ID_FIELD_NAME = "id";
 
@@ -61,6 +72,8 @@ public class DatabaseController {
 
         // Define database paths
         mFirebaseUser = new Firebase(DB_LINK_ADDRESS + USER_DB_REF);
+        mFirebaseUserChallenge = new Firebase(DB_LINK_ADDRESS + USER_CHALLENGE_DB_REF);
+        mFirebaseChallenge = new Firebase(DB_LINK_ADDRESS + CHALLENGE_DB_REF);
         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
         mDatabaseUsers = database.child(USER_DB_REF);
 
@@ -106,7 +119,7 @@ public class DatabaseController {
      */
     public void deleteUserFollow(final String uId) {
         final String currentUid = mCurrentUser.getUid();
-        mFirebaseUser.child(currentUid).child(USER_FOLLOW_DB_REF).child(uId).removeValue();
+        mFirebaseUser.child(currentUid).child(USER_FOLLOW_FIELD_NAME).child(uId).removeValue();
     }
 
     /**
@@ -128,9 +141,9 @@ public class DatabaseController {
      */
     private void addUserFollow(final String uId, final String username) {
         final String currentUid = mCurrentUser.getUid();
-        final Firebase newEntry = mFirebaseUser.child(currentUid).child(USER_FOLLOW_DB_REF);
+        final Firebase newEntry = mFirebaseUser.child(currentUid).child(USER_FOLLOW_FIELD_NAME);
 
-        DatabaseReference databaseUserFollows = mDatabaseUsers.child(currentUid).child(USER_FOLLOW_DB_REF);
+        DatabaseReference databaseUserFollows = mDatabaseUsers.child(currentUid).child(USER_FOLLOW_FIELD_NAME);
 
         databaseUserFollows.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -163,5 +176,15 @@ public class DatabaseController {
                         Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+
+
+    public void addUserChallenge(String uId, UserChallenge userChallenge) {
+
+        Firebase userRef = mFirebaseUser.child(uId).child(USER_CHALLENGE_FIELD_NAME).push();
+        userRef.setValue(userChallenge);
+
+        mFirebaseUserChallenge.child(userChallenge.getDate()).child(uId).setValue(userChallenge);
     }
 }

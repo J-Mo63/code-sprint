@@ -15,7 +15,8 @@ import com.sudo_code.codesprint.model.Challenge;
 import com.sudo_code.codesprint.model.Result;
 
 import java.util.ArrayList;
-import static com.sudo_code.codesprint.task.FetchChallengesTask.CHALLENGES;
+
+import static com.sudo_code.codesprint.activity.BeginChallengeActivity.CHALLENGES;
 
 /**
  * A screen to display and run the challenges. It times the user and passes results on to the
@@ -30,12 +31,14 @@ public class ChallengeActivity extends Activity {
     private Chronometer mTimer;
     private TextView mContentText;
     private TextView mQuestionText;
+    private TextView mQuestionNumberText;
     private EditText mAnswerField;
 
     // Object fields
     private ArrayList<Challenge> mChallenges;
     private ArrayList<Result> mResults;
     private Challenge mCurrentChallenge;
+    private int mQuestionCount;
 
     /**
      * Sets up onscreen elements, gets downloaded challenges, defines click listeners and
@@ -51,9 +54,12 @@ public class ChallengeActivity extends Activity {
         mChallenges = getIntent().getParcelableArrayListExtra(CHALLENGES);
         mResults = new ArrayList<>();
 
+        mQuestionCount = 1;
+
         mTimer = (Chronometer) findViewById(R.id.challenge_time);
         mContentText = (TextView) findViewById(R.id.challenge_content);
         mQuestionText = (TextView) findViewById(R.id.challenge_question);
+        mQuestionNumberText = (TextView) findViewById(R.id.challenge_question_number);
         mAnswerField = (EditText) findViewById(R.id.challenge_answer);
         Button mSubmitButton = (Button) findViewById(R.id.challenge_submit_button);
 
@@ -82,6 +88,7 @@ public class ChallengeActivity extends Activity {
             // If there are more Challenges
             if (mChallenges.size() > 0) {
                 Toast.makeText(this, R.string.answer_correct_notification, Toast.LENGTH_SHORT).show();
+                mQuestionCount++;
                 getChallenge();
             }
             // If all Challenges are completed
@@ -111,6 +118,8 @@ public class ChallengeActivity extends Activity {
         mChallenges.remove(mCurrentChallenge);
         mContentText.setText(mCurrentChallenge.getContent());
         mQuestionText.setText(mCurrentChallenge.getQuestion());
+        String questionNumber = getString(R.string.question_count) + mQuestionCount;
+        mQuestionNumberText.setText(questionNumber);
     }
 
     /**

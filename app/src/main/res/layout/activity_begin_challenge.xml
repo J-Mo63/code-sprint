@@ -29,5 +29,5 @@
         android:layout_height="65dp"
         android:textSize="20sp"
         android:text="@string/begin_button_text"
-        android:enabled="false" />
+        android:visibility="gone" />
 </LinearLayout>

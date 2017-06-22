@@ -1,7 +1,9 @@
 package com.sudo_code.codesprint.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -9,9 +11,16 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.model.Result;
+import com.sudo_code.codesprint.model.UserChallenge;
+import com.sudo_code.codesprint.task.DatabaseController;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Locale;
 import static com.sudo_code.codesprint.activity.ChallengeActivity.RESULTS;
+import static com.sudo_code.codesprint.activity.LoginActivity.USERNAME;
+import static com.sudo_code.codesprint.activity.LoginActivity.USER_ID;
 
 /**
  * A screen to display user results for a particular Challenge.
@@ -61,8 +70,18 @@ public class ResultsActivity extends AppCompatActivity {
             }
         });
 
-//        Post the results to server
-//        new postResultsTask(mResults);
+        DatabaseController databaseController = new DatabaseController(this);
+
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+        Date today = new Date();
+
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd", Locale.ENGLISH);
+        String dateString = formatter.format(today);
+
+        databaseController.addUserChallenge(sharedPrefs.getString(USER_ID, null),
+                new UserChallenge(sharedPrefs.getString(USERNAME, null),
+                        dateString, getGrade(), getTotal()));
     }
 
     /**
@@ -96,6 +115,10 @@ public class ResultsActivity extends AppCompatActivity {
             total += result.getTime();
         }
         return total;
+    }
+
+    private String getGrade() {
+        return "A";
     }
 
 }

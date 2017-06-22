@@ -1,7 +1,5 @@
 package com.sudo_code.codesprint.model;
 
-import java.util.Date;
-
 /**
  * A UserChallenge refers to a specific instance of a completed challenge.
  * It stores the date of the challenge and the user results.
@@ -10,9 +8,11 @@ public class UserChallenge {
 
     // Class fields
     private String username;
-    private Date date;
+    private String date;
     private String grade;
-    private double time;
+    private long time;
+
+    public UserChallenge() {}
 
     /**
      * A constructor for a UserChallenge
@@ -21,7 +21,7 @@ public class UserChallenge {
      * @param grade - The grade achieved by the user
      * @param time - The total time taken to complete it
      */
-    public UserChallenge(String username, Date date, String grade, double time) {
+    public UserChallenge(String username, String date, String grade, long time) {
         this.username = username;
         this.date = date;
         this.grade = grade;
@@ -33,7 +33,7 @@ public class UserChallenge {
      *
      * @return Date - the date
      */
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
@@ -51,7 +51,7 @@ public class UserChallenge {
      *
      * @return double - the time
      */
-    public double getTime() {
+    public long getTime() {
         return time;
     }
 
