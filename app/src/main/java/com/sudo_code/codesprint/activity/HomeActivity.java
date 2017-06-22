@@ -21,9 +21,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.holder.ChallengeHolder;
 import com.sudo_code.codesprint.model.UserChallenge;
@@ -55,6 +62,9 @@ public class HomeActivity extends AppCompatActivity {
         toolbar.setTitle(R.string.app_name);
         setSupportActionBar(toolbar);
         RecyclerView recycler = (RecyclerView) findViewById(R.id.home_recycler_view);
+        final LinearLayout progressLayout = (LinearLayout) findViewById(R.id.home_progress_layout);
+        final ProgressBar progressBar = (ProgressBar) findViewById(R.id.home_progress_bar);
+        final TextView progressText = (TextView) findViewById(R.id.home_progress_text);
 
         // Set up indexed recycler adapter for Firebase
         DatabaseReference db = FirebaseDatabase.getInstance().getReference();
@@ -83,6 +93,21 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(beginChallengeIntent);
+            }
+        });
+
+        // Check to see if data was loaded
+        db.child(USER_DB_REF).child(getCurrentUserId()).child(USER_CHALLENGE_FIELD_NAME)
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                progressLayout.setVisibility(View.INVISIBLE);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                progressBar.setVisibility(View.INVISIBLE);
+                progressText.setText(R.string.load_data_error);
             }
         });
 

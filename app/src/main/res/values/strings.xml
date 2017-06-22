@@ -87,4 +87,8 @@
     <string name="following_yourself_meme">You can\'t follow yourself…</string>
     <string name="error_occurred_super_general">An error occurred</string>
     <string name="dont_have_account">Don\'t have an account yet?</string>
+
+    <!-- MISC -->
+    <string name="load_data_error">There was an error loading data…</string>
+    <string name="loading">Loading…</string>
 </resources>
