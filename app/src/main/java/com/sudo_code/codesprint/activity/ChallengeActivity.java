@@ -13,7 +13,6 @@ import android.widget.Toast;
 import com.sudo_code.codesprint.R;
 import com.sudo_code.codesprint.model.Challenge;
 import com.sudo_code.codesprint.model.Result;
-
 import java.util.ArrayList;
 
 import static com.sudo_code.codesprint.activity.BeginChallengeActivity.CHALLENGES;

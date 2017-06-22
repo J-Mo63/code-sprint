@@ -1001,6 +1001,7 @@
     <string name="default_toolbar_title">@string/app_name</string>
     <string name="default_web_client_id" translatable="false">47975055047-v19hsnhgftc9m70h9vmkts11p61je9jh.apps.googleusercontent.com</string>
     <string name="done_button_text">Done</string>
+    <string name="dont_have_account">Don\'t have an account yet?</string>
     <string name="downloading_challenges_notification">Downloading today\'s challenges</string>
     <string name="email_account_creation_error">Email account registration unsuccessful</string>
     <string name="email_hint">Email</string>

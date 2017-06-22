@@ -25,7 +25,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.sudo_code.codesprint.R;
-import com.sudo_code.codesprint.adapter.ChallengeHolder;
+import com.sudo_code.codesprint.holder.ChallengeHolder;
 import com.sudo_code.codesprint.model.UserChallenge;
 import com.sudo_code.codesprint.task.DatabaseController;
 import static com.sudo_code.codesprint.activity.LoginActivity.USER_ID;
@@ -40,6 +40,7 @@ public class HomeActivity extends AppCompatActivity {
 
     // Object fields
     private DatabaseController mDbController;
+    private FirebaseRecyclerAdapter mAdapter;
 
     /**
      * Sets up the toolbar, defines the recycler, gets objects and populates it.
@@ -57,7 +58,7 @@ public class HomeActivity extends AppCompatActivity {
 
         // Set up indexed recycler adapter for Firebase
         DatabaseReference db = FirebaseDatabase.getInstance().getReference();
-        FirebaseRecyclerAdapter mAdapter = new FirebaseRecyclerAdapter<UserChallenge, ChallengeHolder>(
+        mAdapter = new FirebaseRecyclerAdapter<UserChallenge, ChallengeHolder>(
                 UserChallenge.class, R.layout.challenge_item, ChallengeHolder.class,
                 db.child(USER_DB_REF).child(getCurrentUserId()).child(USER_CHALLENGE_FIELD_NAME)) {
             @Override
@@ -165,6 +166,16 @@ public class HomeActivity extends AppCompatActivity {
         // Create the alert dialog
         AlertDialog alert = alertDialogBuilder.create();
         alert.show();
+    }
+
+    /**
+     * Cleans up the recycler adapter and shuts down the connection to the database
+     * after the activity is destroyed.
+     */
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mAdapter.cleanup();
     }
 
     /**

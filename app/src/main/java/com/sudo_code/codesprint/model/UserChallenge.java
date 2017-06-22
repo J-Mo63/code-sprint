@@ -12,6 +12,9 @@ public class UserChallenge {
     private String grade;
     private long time;
 
+    /**
+     * An empty constructer used by Firebase to populate objects.
+     */
     public UserChallenge() {}
 
     /**

@@ -12,10 +12,11 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseIndexRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.sudo_code.codesprint.R;
-import com.sudo_code.codesprint.adapter.UserChallengeHolder;
+import com.sudo_code.codesprint.holder.UserChallengeHolder;
 import com.sudo_code.codesprint.model.UserChallenge;
 
 import java.text.ParseException;
@@ -24,9 +25,9 @@ import java.util.Date;
 import java.util.Locale;
 
 import static com.sudo_code.codesprint.activity.LoginActivity.USER_ID;
-import static com.sudo_code.codesprint.adapter.ChallengeHolder.USER_CHALLNGE_DATE;
-import static com.sudo_code.codesprint.adapter.ChallengeHolder.USER_CHALLNGE_GRADE;
-import static com.sudo_code.codesprint.adapter.ChallengeHolder.USER_CHALLNGE_TIME;
+import static com.sudo_code.codesprint.holder.ChallengeHolder.USER_CHALLNGE_DATE;
+import static com.sudo_code.codesprint.holder.ChallengeHolder.USER_CHALLNGE_GRADE;
+import static com.sudo_code.codesprint.holder.ChallengeHolder.USER_CHALLNGE_TIME;
 import static com.sudo_code.codesprint.task.DatabaseController.USER_CHALLENGE_DB_REF;
 import static com.sudo_code.codesprint.task.DatabaseController.USER_DB_REF;
 import static com.sudo_code.codesprint.task.DatabaseController.USER_FOLLOW_FIELD_NAME;
@@ -36,9 +37,9 @@ import static com.sudo_code.codesprint.task.DatabaseController.USER_FOLLOW_FIELD
  * themselves and any users that have completed it that they follow.
  */
 public class UserChallengeActivity extends AppCompatActivity {
-    // UI fields
-    private TextView mTimeText;
-    private TextView mGradeText;
+
+    // Object fields
+    FirebaseRecyclerAdapter mAdapter;
 
     /**
      * Sets up the toolbar, defines the recycler, gets objects and populates it.
@@ -58,8 +59,8 @@ public class UserChallengeActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         RecyclerView mRecycler = (RecyclerView) findViewById(R.id.user_challenge_recycler);
-        mTimeText = (TextView) findViewById(R.id.activity_user_time);
-        mGradeText = (TextView) findViewById(R.id.activity_user_grade);
+        TextView mTimeText = (TextView) findViewById(R.id.activity_user_time);
+        TextView mGradeText = (TextView) findViewById(R.id.activity_user_grade);
 
         String time = formatTime(extras.getLong(USER_CHALLNGE_TIME));
         mTimeText.setText(time);
@@ -70,8 +71,7 @@ public class UserChallengeActivity extends AppCompatActivity {
 
         // Set up indexed recycler adapter for Firebase
         DatabaseReference db = FirebaseDatabase.getInstance().getReference();
-        FirebaseIndexRecyclerAdapter mAdapter =
-                new FirebaseIndexRecyclerAdapter<UserChallenge, UserChallengeHolder>(
+        mAdapter = new FirebaseIndexRecyclerAdapter<UserChallenge, UserChallengeHolder>(
                 UserChallenge.class, R.layout.user_challenge_item, UserChallengeHolder.class,
                 db.child(USER_DB_REF).child(uId).child(USER_FOLLOW_FIELD_NAME),
                 db.child(USER_CHALLENGE_DB_REF)
@@ -105,6 +105,16 @@ public class UserChallengeActivity extends AppCompatActivity {
     }
 
     /**
+     * Cleans up the recycler adapter and shuts down the connection to the database
+     * after the activity is destroyed.
+     */
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mAdapter.cleanup();
+    }
+
+    /**
      * A helper method to format longs into strings with the appropriate formatting.
      *
      * @param time - the long to be formatted
@@ -115,6 +125,11 @@ public class UserChallengeActivity extends AppCompatActivity {
         return String.format(Locale.UK, "%.2f", d) + "s";
     }
 
+    /**
+     * A helper method to format a date string.
+     *
+     * @return String - the formatted date
+     */
     private String getDate() {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd", Locale.ENGLISH);
         String dateString;

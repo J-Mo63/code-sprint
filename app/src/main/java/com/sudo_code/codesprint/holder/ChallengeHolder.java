@@ -1,4 +1,4 @@
-package com.sudo_code.codesprint.adapter;
+package com.sudo_code.codesprint.holder;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -35,7 +35,7 @@ public class ChallengeHolder extends RecyclerView.ViewHolder {
     public static final String USER_CHALLNGE_GRADE = "user_challenge_grade";
 
     /**
-     * A constructor that has an onclick listener
+     * A constructor for the ChallengeHolder.
      *
      * @param itemView - The current ViewHolder
      */

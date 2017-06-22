@@ -14,7 +14,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.sudo_code.codesprint.R;
-import com.sudo_code.codesprint.adapter.UserFollowHolder;
+import com.sudo_code.codesprint.holder.UserFollowHolder;
 import com.sudo_code.codesprint.model.User;
 
 import static com.sudo_code.codesprint.activity.LoginActivity.USER_ID;

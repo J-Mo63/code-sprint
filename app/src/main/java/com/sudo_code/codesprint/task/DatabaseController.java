@@ -16,7 +16,8 @@ import com.sudo_code.codesprint.model.User;
 import com.sudo_code.codesprint.model.UserChallenge;
 
 /**
- *
+ * A class that assists with posting to and removing data from the Firebase realtime database.
+ * It contains a series of methods for interfacing with the database.
  */
 public class DatabaseController {
 
@@ -29,7 +30,6 @@ public class DatabaseController {
     // Firebase fields
     private Firebase mFirebaseUser;
     private Firebase mFirebaseUserChallenge;
-    private Firebase mFirebaseChallenge;
 
     // Database references
     private DatabaseReference mDatabaseUsers;
@@ -68,7 +68,6 @@ public class DatabaseController {
         // Define database paths
         mFirebaseUser = new Firebase(DB_LINK_ADDRESS + USER_DB_REF);
         mFirebaseUserChallenge = new Firebase(DB_LINK_ADDRESS + USER_CHALLENGE_DB_REF);
-        mFirebaseChallenge = new Firebase(DB_LINK_ADDRESS + CHALLENGE_DB_REF);
         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
         mDatabaseUsers = database.child(USER_DB_REF);
 

@@ -1,4 +1,4 @@
-package com.sudo_code.codesprint.adapter;
+package com.sudo_code.codesprint.holder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -9,7 +9,7 @@ import com.sudo_code.codesprint.model.UserChallenge;
 import java.util.Locale;
 
 /**
- * A class for viewholder... for the adapter.
+ * A class for the UserChallengeHolder used by the Firebase UI Recycler Adapter
  */
 public class UserChallengeHolder extends RecyclerView.ViewHolder {
 
@@ -17,7 +17,6 @@ public class UserChallengeHolder extends RecyclerView.ViewHolder {
     private TextView usernameTextView;
     private TextView gradeTextView;
     private TextView timeTextView;
-    private TextView rankTextView;
 
     /**
      * a constructor that has an onclick listener
@@ -29,7 +28,6 @@ public class UserChallengeHolder extends RecyclerView.ViewHolder {
         usernameTextView = (TextView) itemView.findViewById(R.id.user_challenge_item_username);
         gradeTextView = (TextView) itemView.findViewById(R.id.user_challenge_item_grade);
         timeTextView = (TextView) itemView.findViewById(R.id.user_challenge_item_time);
-        rankTextView = (TextView) itemView.findViewById(R.id.user_challenge_item_rank);
     }
 
     /**

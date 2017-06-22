@@ -1,4 +1,4 @@
-package com.sudo_code.codesprint.adapter;
+package com.sudo_code.codesprint.holder;
 
 import android.app.Activity;
 import android.content.DialogInterface;

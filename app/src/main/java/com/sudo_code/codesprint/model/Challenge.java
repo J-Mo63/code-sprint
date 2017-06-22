@@ -15,6 +15,9 @@ public class Challenge implements Parcelable {
     private String question;
     private String answer;
 
+    /**
+     * An empty constructer used by Firebase to populate objects.
+     */
     public Challenge() {}
 
     /**
