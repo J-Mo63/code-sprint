@@ -48,8 +48,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textSize="20sp"
-                    android:text="34.33" />
+                    android:textSize="20sp" />
 
             </TableRow>
 
@@ -74,8 +73,7 @@
                     android:layout_width="match_parent"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:text="B" />
+                    android:textSize="20sp" />
 
             </TableRow>
 

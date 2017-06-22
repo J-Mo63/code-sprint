@@ -29,6 +29,11 @@ public class ChallengeHolder extends RecyclerView.ViewHolder {
     private TextView timeTextView;
     private LinearLayout itemLayout;
 
+    // Constants
+    public static final String USER_CHALLNGE_DATE = "user_challenge_date";
+    public static final String USER_CHALLNGE_TIME = "user_challenge_time";
+    public static final String USER_CHALLNGE_GRADE = "user_challenge_grade";
+
     /**
      * A constructor that has an onclick listener
      *
@@ -51,7 +56,7 @@ public class ChallengeHolder extends RecyclerView.ViewHolder {
      *
      * @param userChallenge - the given userChallenge
      */
-    public void setComponents(UserChallenge userChallenge) {
+    public void setComponents(final UserChallenge userChallenge) {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd", Locale.ENGLISH);
         String dateString;
         try {
@@ -71,7 +76,9 @@ public class ChallengeHolder extends RecyclerView.ViewHolder {
             public void onClick(View view) {
                 Intent beginChallengeIntent = new Intent(view.getContext(), UserChallengeActivity.class);
 
-                
+                beginChallengeIntent.putExtra(USER_CHALLNGE_DATE, userChallenge.getDate());
+                beginChallengeIntent.putExtra(USER_CHALLNGE_TIME, userChallenge.getTime());
+                beginChallengeIntent.putExtra(USER_CHALLNGE_GRADE, userChallenge.getGrade());
 
                 view.getContext().getApplicationContext().startActivity(beginChallengeIntent);
             }
