@@ -1020,6 +1020,7 @@
     <string name="following_title">Users you follow</string>
     <string name="following_yourself_meme">You can\'t follow yourself…</string>
     <string name="form_error">Please enter a </string>
+    <string name="form_error_const">Please enter an </string>
     <string name="gcm_defaultSenderId" translatable="false">47975055047</string>
     <string name="general_error">An error has occurred.</string>
     <string name="google_api_key" translatable="false">AIzaSyAjy7zTcbCDpyIICGZ1b9o9udJdYZvASPA</string>
@@ -1079,7 +1080,7 @@
     <string name="signin_error_bad_password">Username or password incorrect</string>
     <string name="signin_error_generic">There was a problem signing you in…</string>
     <string name="signin_error_no_user">Email does not exist (in our system)</string>
-    <string name="signup_description">Sign up to CodeSprint below with a username email and password.</string>
+    <string name="signup_description">Sign up to CodeSprint below with a username email and password. Password must contain 6 or more characters.</string>
     <string name="signup_error_email_collision">This email is already in use</string>
     <string name="signup_error_generic">There was a problem signing you up…</string>
     <string name="signup_error_simple_password">This password is not complex enough, please use 6 or more characters</string>

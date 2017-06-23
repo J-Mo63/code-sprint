@@ -266,18 +266,18 @@ public class LoginActivity extends AppCompatActivity {
 
         if (username.equals("")) {
             focusView = mUsernameEditText;
-            fieldName = getString(R.string.prompt_username).toLowerCase();
+            fieldName = getString(R.string.form_error_const) + getString(R.string.prompt_email).toLowerCase();
         }
         else if (password.equals("")) {
             focusView = mPasswordEditText;
-            fieldName = getString(R.string.prompt_password).toLowerCase();
+            fieldName = getString(R.string.form_error) + getString(R.string.prompt_password).toLowerCase();
         }
 
         // Focus the first form field with an error
         if (focusView != null) {
             focusView.requestFocus();
         }
-        Toast.makeText(this, getString(R.string.form_error) + fieldName, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, fieldName, Toast.LENGTH_SHORT).show();
     }
 }
 

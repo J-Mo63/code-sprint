@@ -10,6 +10,7 @@
     <string name="signed_in_notification">Signed in successfully</string>
     <string name="sign_up_button_text">Sign Up</string>
     <string name="form_error">Please enter a&#160;</string>
+    <string name="form_error_const">Please enter an&#160;</string>
     <string name="signin_error_generic">There was a problem signing you in…</string>
     <string name="signin_error_no_user">Email does not exist (in our system)</string>
     <string name="signin_error_bad_password">Username or password incorrect</string>
@@ -78,7 +79,7 @@
     <string name="signup_error_generic">There was a problem signing you up…</string>
     <string name="signup_error_email_collision">This email is already in use</string>
     <string name="signup_error_simple_password">This password is not complex enough, please use 6 or more characters</string>
-    <string name="signup_description">Sign up to CodeSprint below with a username email and password.</string>
+    <string name="signup_description">Sign up to CodeSprint below with a username email and password. Password must contain 6 or more characters.</string>
     <string name="prompt_email">Email</string>
     <string name="error_occured_general">An error occurred, please try again later</string>
     <string name="no_user_found_error">No user by that name found</string>
