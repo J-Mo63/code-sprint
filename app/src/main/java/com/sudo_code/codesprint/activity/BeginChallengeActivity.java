@@ -108,11 +108,3 @@ public class BeginChallengeActivity extends AppCompatActivity {
     }
 
 }
-
-
-//challenges.add(new Challenge(1, "int i = 5;\nint* p = &i;\n*p += 10;\ncout << *p;",
-//        "What is output by this code?", "15"));
-//        challenges.add(new Challenge(2, "int i = 5;\nint* p = &i;\np += 10;\ncout << &i;",
-//        "What is output by this code?", "5"));
-//        challenges.add(new Challenge(3, "int main(){\n  string input;\n  cin >> input;\n  cout << input;\n}",
-//        "What will the following code print if given the input \"Hello World\"?", "Hello"));
